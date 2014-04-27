@@ -5,7 +5,7 @@ import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 
 /**
  *
@@ -41,12 +41,22 @@ public class LeitoEJB {
     }
 
     public Leito selecionaPorID(Integer id) {
-        Query query = em.createQuery("Select l From Leito l where l.idLeito= :id");
+        TypedQuery<Leito> query = em.createQuery("select l From Leito l where l.idLeito = :id",
+                Leito.class);
         query.setParameter("id", id);
-        return (Leito) query.getSingleResult();
+        return query.getSingleResult();
+    }
+    
+    public Leito selecionaPorDescricao(String descricao) {
+        TypedQuery<Leito> query = em.createQuery("select l From Leito l where l.descricaoLeito = :descricao",
+                Leito.class);
+        query.setParameter("descricao", descricao);
+        return query.getSingleResult();
     }
 
     public List<Leito> listaTodos() {
-        return em.createQuery("from Leito l").getResultList();
+        TypedQuery<Leito> query = em.createQuery("select l From Leito l",
+                Leito.class);
+        return query.getResultList();
     }
 }

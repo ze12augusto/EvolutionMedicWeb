@@ -45,7 +45,7 @@ public class FraseMB {
        if (erro == null) {
             FacesMessage fm
                     = new FacesMessage(FacesMessage.SEVERITY_INFO,
-                    "Cliente salvo com sucesso", null);
+                    "Frase salva com sucesso", null);
             FacesContext.getCurrentInstance().addMessage(null, fm);
         } else {
             FacesMessage fm
@@ -68,7 +68,7 @@ public class FraseMB {
         String erro = fEJB.excluir(frase);
         if (erro == null) {
             FacesContext fc = FacesContext.getCurrentInstance();
-            fc.addMessage(null, new FacesMessage("Excluído com sucesso!"));
+            fc.addMessage(null, new FacesMessage("Excluída com sucesso!"));
         } else {
             FacesContext fc = FacesContext.getCurrentInstance();
             fc.addMessage(null, new FacesMessage("Erro ao tentar excluir!"));

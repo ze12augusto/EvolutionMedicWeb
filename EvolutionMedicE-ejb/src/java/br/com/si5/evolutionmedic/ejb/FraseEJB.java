@@ -5,7 +5,7 @@ import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 
 /**
  *
@@ -22,7 +22,7 @@ public class FraseEJB {
         try {
             em.merge(frase);
         } catch (Exception e) {
-           e.printStackTrace();
+            e.printStackTrace();
             return e.getMessage();
         }
         return null;
@@ -39,12 +39,15 @@ public class FraseEJB {
     }
 
     public Frase selecionaPorID(Integer id) {
-        Query query = em.createQuery("Select f From Frase f where f.idFrase= :id");
+        TypedQuery<Frase> query = em.createQuery("select f From Frase f where f.idFrase = :id",
+                Frase.class);
         query.setParameter("id", id);
-        return (Frase) query.getSingleResult();
+        return query.getSingleResult();
     }
 
     public List<Frase> listaTodos() {
-        return em.createQuery("from Frase f").getResultList();
+        TypedQuery<Frase> query = em.createQuery("select f From Frase f",
+                Frase.class);
+        return query.getResultList();
     }
 }

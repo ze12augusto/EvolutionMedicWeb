@@ -14,9 +14,9 @@ import javax.inject.Named;
  *
  * @author joseaugusto
  */
-@Named("criadorTipoLeitosPadrao")
+@Named("criadorDadosPadrao")
 @RequestScoped
-public class CriadorTipoLeitosPadrao {
+public class CriadorDadosPadrao {
 
     @EJB
     private TipoLeitoEJB tipoLeitoEjb;
@@ -67,36 +67,38 @@ public class CriadorTipoLeitosPadrao {
         leitosExtras = new ArrayList<>();
         leitosNormais = new ArrayList<>();
         leitosIsolados = new ArrayList<>();
-
+        int numero = 1;
         for (int i = 0; i < 4; i++) {
-
-            salvarLeito("Extra");
+            
+            salvarLeito("Extra", "Extra_" + numero);
+            numero++;
         }
         tipoLeito = buscaTipoLeito("Extra");
         tipoLeito.setLeitoList(leitosExtras);
         tipoLeitoEjb.salvar(tipoLeito);
-
+        numero = 1;
         for (int i = 0; i < 10; i++) {
-
-            salvarLeito("Normal");
+            salvarLeito("Normal", "Normal_"+ numero);
+            numero++;
         }
         tipoLeito = buscaTipoLeito("Normal");
         tipoLeito.setLeitoList(leitosNormais);
         tipoLeitoEjb.salvar(tipoLeito);
-
+        numero = 1;
         for (int i = 0; i < 4; i++) {
-
-            salvarLeito("Isolado");
+            salvarLeito("Isolado","Isolado_"+ numero);
+            numero++;
         }
         tipoLeito = buscaTipoLeito("Isolado");
         tipoLeito.setLeitoList(leitosIsolados);
         tipoLeitoEjb.salvar(tipoLeito);
     }
 
-    private void salvarLeito(String descricao) {
+    private void salvarLeito(String descricao, String descricaoLeito) {
 
         leito = new Leito();
         leito.setTipoLeito(buscaTipoLeito(descricao));
+        leito.setDescricaoLeito(descricaoLeito);
         adicionarNaLista(leito, descricao);
     }
 

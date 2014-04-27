@@ -34,8 +34,11 @@ public class Leito implements Serializable {
     @Basic(optional = false)
     @Column(name = "IdLeito", nullable = false)
     private Short idLeito;
+    @Basic(optional = false)
+    @Column(name = "DescricaoLeito", nullable = false)
+    private String descricaoLeito;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "leito")
-    private List<Avaliacao> avaliacao;
+    private List<Avaliacao> avaliacaoList;
     @JoinColumn(name = "IdTipo_Leito", referencedColumnName = "IdTipo_Leito", nullable = false)
     @ManyToOne(optional = false)
     private TipoLeito tipoLeito;
@@ -51,16 +54,24 @@ public class Leito implements Serializable {
         return idLeito;
     }
 
+    public String getDescricaoLeito() {
+        return descricaoLeito;
+    }
+
+    public void setDescricaoLeito(String descricaoLeito) {
+        this.descricaoLeito = descricaoLeito;
+    }
+    
     public void setIdLeito(Short idLeito) {
         this.idLeito = idLeito;
     }
 
-    public List<Avaliacao> getAvaliacao() {
-        return avaliacao;
+    public List<Avaliacao> getAvaliacaoList() {
+        return avaliacaoList;
     }
 
-    public void setAvaliacao(List<Avaliacao> avaliacao) {
-        this.avaliacao = avaliacao;
+    public void setAvaliacaoList(List<Avaliacao> avaliacaoList) {
+        this.avaliacaoList = avaliacaoList;
     }
 
 
