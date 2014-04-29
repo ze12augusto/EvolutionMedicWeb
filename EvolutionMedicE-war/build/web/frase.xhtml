@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html">
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
     <head>
         <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0"/>
         <meta name="apple-mobile-web-app-capable" content="yes"/>
@@ -105,39 +106,53 @@
             </div>
         </div>
 
-         <div id="content" class="page-content"> 
+        <div id="content" class="page-content"> 
 
-                <div class="page-header hide-if-responsive" style="margin-bottom: 20px;">
-                    <a href="#" class="deploy-sidebar"></a>
-                    <img class="header-logo" src="images/misc/logo-WENDEL.png" width="71" alt="img">
+            <div class="page-header hide-if-responsive" style="margin-bottom: 20px;">
+                <a href="#" class="deploy-sidebar"></a>
+                <img class="header-logo" src="images/misc/logo-WENDEL.png" width="71" alt="img"/>
+            </div>
+
+            <div class="page-header hide-if-mobile" style="margin-bottom: 20px;">
+
+                <div id="cssmenu">
+                    <ul>
+                        <div class="logo">
+                            <a href='index.xhtml'><img src="images/misc/logo-WENDEL.png"/></a>
+                        </div>
+                        <li class='last'><a href='index.xhtml'><span>Home</span></a></li>
+                        <li class='last'><a href='index.xhtml'><span>Leitos</span></a></li>
+                        <li class='last'><a href='extra.xhtml'><span>Extra</span></a></li>
+                        <li class='last'><a href='isolado.xhtml'><span>Isolado</span></a></li>
+                        <li class='last'><a href='frase.xhtml'><span>Cadastro Frase</span></a></li>
+                        <li class='last'><a href='#'><span>Imprimir Relatório</span></a></li>
+
+                    </ul>
                 </div>
-                
-                <div class="page-header hide-if-mobile" style="margin-bottom: 20px;">
-                        
-                    <div id="cssmenu">
-                        <ul>
-                            <div class="logo">
-                              <a href='index.html'><img src="images/misc/logo-WENDEL.png"/></a>
-                    </div>
-                            <li class='last'><a href='index.html'><span>Home</span></a></li>
-                            <li class='last'><a href='index.html'><span>Leitos</span></a></li>
-                            <li class='last'><a href='extra.html'><span>Extra</span></a></li>
-                            <li class='last'><a href='isolado.html'><span>Isolado</span></a></li>
-                            <li class='last'><a href='frase.html'><span>Cadastro Frase</span></a></li>
-                            <li class='last'><a href='relatorio.html'><span>Imprimir Relatório</span></a></li>
-                           
-                        </ul>
-                    </div>
+            </div>
+
+
+            <div class="page-header-clear"></div>
+
+            <div class="one-half-responsive">
+                <div class="container">
+                    <h:form class="bloco_frase" id="bloco_frase">
+
+                        <div class="formFieldWrap">
+                            <label ></label>
+                            <h:inputHidden  value="#{fraseMB.frase.idFrase}" />
+                            <p:inputText type="text"  value="#{fraseMB.frase.descricao}"  id="contactNameField"/>
+                        </div>
+
+
+                        <div >
+                            <p:commandButton type="submit"  actionListener="#{fraseMB.salvar()}" id="contactSubmitButton" value="Salvar" update="bloco_frase"/>
+                        </div>
+
+                    </h:form>
                 </div>
-                
-                
-                 <div class="page-header-clear"></div>
+            </div>    
 
-            <div class="decoration"></div> 
-
-
-
-            <div class="decoration"></div> 
         </div>  
     </body>
 </html>

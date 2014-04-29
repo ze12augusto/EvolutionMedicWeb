@@ -2,7 +2,7 @@
 /* CSS Document */
 
 body {
-  background-color: #3f3f3f; /* for the tint */
+  background-image:url(../images/misc/bg.png);
 }
 
 .overlay{
@@ -19,7 +19,7 @@ body {
 }
 
 .page-content{
-	background-color: #3f3f3f;
+	background-image:url(../images/misc/bg.png);
 	z-index:10;
 	display:block;
 	min-height:643px;		

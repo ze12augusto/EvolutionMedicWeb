@@ -395,10 +395,9 @@ a:hover{
 	}
 	
 	.one-half-responsive{
-		width: 10%;
+		width: 40%;
 		float:left;
-		margin-left: 1%;
-		margin-right: -12%;
+		
 	}
 	
 	.hide-if-responsive{
@@ -1601,7 +1600,8 @@ table tr:hover td{
 	display:block!important;
 	height:36px!important;
 	margin-right:4px;
-	width:100%;
+	width:30%;
+        border-radius: 5px 5px 5px 5px;
 }
 
 .contact-form{
@@ -1682,6 +1682,7 @@ table tr:hover td{
 	padding-left:10px;
 	padding-right:10px;
 	margin-bottom:10px;
+        border-radius: 4px 4px 4px 4px;
 }
 
 .contactTextarea{
