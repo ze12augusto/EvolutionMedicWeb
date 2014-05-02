@@ -35,7 +35,7 @@ body {
 }
 
 .page-sidebar{
-	background-image:url(../images/misc/menu-bg.png);
+	background-image:url(../images/misc/bg-menu.png);
 	background-repeat:repeat;
 	background-size:75px 75px;
 	width:274px;
@@ -461,7 +461,7 @@ body {
 	width: 120px;
 	margin-left:auto;
 	margin-right:auto;
-	margin-top: -46px;
+	margin-top: -43px;
 }
 
 

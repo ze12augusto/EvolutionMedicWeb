@@ -228,7 +228,7 @@ a{
 }
 
 a:hover{
-	color:#5dbab5;
+	color:#b74439;
 }
 
 /*////////////////////////*/
@@ -323,7 +323,7 @@ a:hover{
 	left:0;
 	right:0;
 	bottom:0;
-	background-color:#FFF; 
+	background-image:url(../images/misc/bg.png);
 	z-index:999999; 
 }
 
