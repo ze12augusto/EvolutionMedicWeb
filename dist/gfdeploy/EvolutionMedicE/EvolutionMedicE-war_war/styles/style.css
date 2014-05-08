@@ -71,7 +71,7 @@ body {
 }
 
 .sidebar-shortcuts{
-	background-color:#1e1e1e;
+	background-color:#c3dddd;
 	height:50px;	
 	border-bottom:solid 1px #2a2a2a;
 }
@@ -194,7 +194,7 @@ body {
 .sidebar-breadcrumb{
 	border-top:solid 1px rgba(255,255,255,0.05);
 	border-bottom:solid 1px rgba(255,255,255,0.05);
-	background-color:#1a1a1a;
+	background-color:#c3dddd;
 	font-size:10px;
 	padding-top:5px;
 	padding-bottom:5px;
@@ -446,7 +446,7 @@ body {
 }
 
 .page-header{
-	background-color:#1e1e1e;
+	background-color:#c3dddd;
 	height:49px;
 	width:100%;
 	position: fixed;
@@ -461,7 +461,7 @@ body {
 	width: 120px;
 	margin-left:auto;
 	margin-right:auto;
-	margin-top: -43px;
+	margin-top: -50px;
 }
 
 
@@ -882,11 +882,11 @@ h3{width:80px;
 
 #cssmenu {
   font-size: 12px;
-  font-weight: 300;
+  font-weight: 500;
   line-height: 15px;
   text-transform: uppercase;
   text-align: center;
-  width: 70%;
+  width: 65%;
   margin: auto;
 }
 #cssmenu > ul {
@@ -943,13 +943,13 @@ h3{width:80px;
   display: block;
   padding: 16px 25px 15px 24px;
   text-decoration: none;
-  color: #fff;
+  color: #1d2b35;
 
 }
 #cssmenu > ul li a.active,
 #cssmenu > ul li a:hover {
-  background: #b74439;
-  color: #fff;
+  background: #9fcbe3;
+  color: #223440;
 }
 @media (max-width: 600px) {
   #cssmenu > ul {
@@ -1005,9 +1005,13 @@ h3{width:80px;
   }
 }
 
-.logo{width: 140px;
-height: 43px;
+.logo{
 margin-top: 3px;
 margin-left: 5px;
 float: left;
+}
+
+.btn-cadfrase{ width: 16px;
+    background-image:url(../images/excluir.png); 
+    
 }

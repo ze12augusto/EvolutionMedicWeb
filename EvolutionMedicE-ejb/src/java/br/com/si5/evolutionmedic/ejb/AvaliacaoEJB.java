@@ -1,6 +1,7 @@
 package br.com.si5.evolutionmedic.ejb;
 
 import br.com.si5.evolutionmedic.entidades.Avaliacao;
+import br.com.si5.evolutionmedic.entidades.Frase;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -50,5 +51,9 @@ public class AvaliacaoEJB {
         TypedQuery<Avaliacao> query = em.createQuery("select a From Avaliacao a",
                 Avaliacao.class);
         return query.getResultList();
+    }
+
+    public String salvar(Frase frase) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

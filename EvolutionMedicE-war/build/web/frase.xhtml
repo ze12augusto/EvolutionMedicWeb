@@ -40,15 +40,7 @@
         <script type="text/javascript" src="scripts/framework.launcher.js"></script>
     </head>
     <body>
-        #{criadorDadosPadrao.criadorTipoLeito()}    
-        <div id="preloader">
-            <div id="status">
-                
-            </div>
-        </div>
-
-
-        <div class="all-elements">
+           <div class="all-elements">
             <div id="sidebar" class="page-sidebar">
                 <div class="page-sidebar-scroll">
                     <div class="sidebar-shortcuts">
@@ -116,7 +108,7 @@
                     <div id="cssmenu">
                         <ul>
                             <div class="logo">
-                                <a href='index.xhtml'><img src="images/misc/logo-evolution.png"/></a>
+                                <a href='index.xhtml'><img class="logo" src="images/misc/logo-evolution.png" width="95" alt="img"/></a>
                     </div>
                             <li class='last'><a href='index.xhtml'><span>Home</span></a></li>
                             <li class='last'><a href='index.xhtml'><span>Leitos</span></a></li>
@@ -132,24 +124,65 @@
 
             <div class="page-header-clear"></div>
 
-            <div class="content">
-                <div class="container">
-                    <h:form class="bloco_frase" id="bloco_frase">
+           
+                <div class="content">
+                     <div class="container"> 
+                         <div class="one-half-responsive">
+                         <p style="text-align:center">Cadastro de Frases</p>
+                    <h:form id="bloco_frase">
 
                         <div class="formFieldWrap">
                             
                             <h:inputHidden  value="#{fraseMB.frase.idFrase}" />
-                            <p:inputText type="text"  value="#{fraseMB.frase.descricao}"  id="contactNameField"/>
+                            <p:inputText type="text"
+                                         value="#{fraseMB.frase.descricao}"
+                                         styleClass="contactField requiredField requiredEmailField"
+                                         id="contactNameField"/>
                         </div>
 
 
-                        <div >
-                            <p:commandButton type="submit"  actionListener="#{fraseMB.salvar()}" id="contactSubmitButton" value="Salvar" update="bloco_frase"/>
-                        </div>
-
+                        
+                            <p:commandButton type="submit"  
+                                             actionListener="#{fraseMB.salvar()}" 
+                                             id="contactSubmitButton" 
+                                             value="Salvar" 
+                                             styleClass="buttonWrap button button-blue contactSubmitButton"
+                                             />
+                      
                     </h:form>
-                </div>
-            </div>    
+                         </div>
+                     </div>
+              
+            
+             <div class="decoration hide-if-responsive"></div>
+              
+                    
+                    <div class="container no-bottom">
+                        <h:form>
+                            
+                            <p:dataTable var="frase" value="#{fraseMB.carregaLista()}">
+                                <p:column headerText="Frases Cadastradas">
+                                    <h:outputText value="#{frase.descricao}" />
+                                </p:column>
+                                 <p:column headerText="Excluir">
+                                     <p:commandButton value="Excluir"
+                                                      
+                                                      styleClass="btn btn-red"
+                                                      actionListener="#{fraseMB.excluir(frase.idFrase)}" />
+                                </p:column>
+                                 <p:column headerText="Editar">
+                                     <p:commandButton value="Editar"
+                                                      
+                                                      styleClass="btn btn-blue"
+                                                      actionListener="#{fraseMB.editar()}" />
+                                </p:column>
+                                
+                        </p:dataTable>
+                        </h:form>
+                     </div>
+                   
+                </div> 
+                <div class="clear"></div>
 
         </div>  
     </body>

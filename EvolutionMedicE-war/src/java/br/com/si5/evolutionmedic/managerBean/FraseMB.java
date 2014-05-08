@@ -20,6 +20,7 @@ public class FraseMB {
     @EJB
     private FraseEJB fEJB;
     private Frase frase;
+    private Frase fraseSelecionada;
     private List<Frase> listaParaCarregar;
 
     public FraseMB() {
@@ -64,8 +65,8 @@ public class FraseMB {
         return frase = fEJB.selecionaPorID(id);
     }
 
-    public void Excluir(Frase frase) {
-        String erro = fEJB.excluir(frase);
+    public void excluir(Integer id) {
+        String erro = fEJB.excluir(id);
         if (erro == null) {
             FacesContext fc = FacesContext.getCurrentInstance();
             fc.addMessage(null, new FacesMessage("Excluída com sucesso!"));
@@ -73,5 +74,18 @@ public class FraseMB {
             FacesContext fc = FacesContext.getCurrentInstance();
             fc.addMessage(null, new FacesMessage("Erro ao tentar excluir!"));
         }
+    }
+
+    public Frase getFraseSelecionada() {
+        return fraseSelecionada;
+    }
+
+    public void setFraseSelecionada(Frase fraseSelecionada) {
+        this.fraseSelecionada = fraseSelecionada;
+    }
+    
+    public void editar(){
+    
+        frase = fraseSelecionada;
     }
 }
