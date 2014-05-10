@@ -40,21 +40,14 @@
         <script type="text/javascript" src="scripts/framework.launcher.js"></script>
     </head>
     <body>
-<<<<<<< HEAD:EvolutionMedicE-war/build/web/avaliacao.xhtml
-         <div id="preloader">
-            <div id="status">
-            </div>
-        </div>
-        <div class="all-elements">
-=======
            <div class="all-elements">
->>>>>>> 26948465f565f8f69d50adfe2ea89d04199ee2ac:EvolutionMedicE-war/build/web/avaliacao.xhtml
             <div id="sidebar" class="page-sidebar">
                 <div class="page-sidebar-scroll">
                     <div class="sidebar-shortcuts">
                         <a href="https://google.com" class="shortcut-search"></a>
                         <a href="#" class="shortcut-close"></a>
                     </div>
+
                     <div class="sidebar-search">
                         <div class="search-box">
                             <input type="text" class="search-field" name="search" onfocus="if (this.value == 'Looking for something?') {
@@ -63,6 +56,7 @@
                             <a href="#" class="search-close"></a>
                         </div>
                     </div>
+
                     <div class="sidebar-logo">
                         <img src="images/misc/logo-evolutionMedic.png" height="90" alt="img"/>
                     </div>
@@ -91,7 +85,7 @@
                     </div>
                     <div class="sidebar-decoration"></div>
                     <div class="navigation-item">
-                        <a href="#" class="nav-item impress-icon">Visualizar<em class="unselected-item"></em></a>
+                        <a href="#" class="nav-item impress-icon">Imprimir Relatório<em class="unselected-item"></em></a>
                     </div>
                     <div class="sidebar-decoration"></div>
                     <div class="navigation-item">
@@ -100,74 +94,7 @@
                     <div class="sidebar-decoration"></div>
                 </div>         
             </div>
-            <!--             <div class="page-header hide-if-responsive" style="margin-bottom: 20px;">
-                    <a href="#" class="deploy-sidebar"></a>
-                    <img class="header-logo" src="images/misc/logo-evolution.png" width="71" alt="img"/>
-                </div>-->
         </div>
-<<<<<<< HEAD:EvolutionMedicE-war/build/web/avaliacao.xhtml
-        <div id="content" class="page-content"> 
-
-            <div class="page-header hide-if-responsive" style="margin-bottom: 20px;">
-                <a href="#" class="deploy-sidebar"></a>
-                <img class="header-logo" src="images/misc/logo-evolution.png" width="71" alt="img"/>
-            </div>
-            <div class="page-header hide-if-mobile" style="margin-bottom: 20px;">
-                <div id="cssmenu">
-                    <ul>
-                        <div class="logo">
-                            <a href='index.xhtml'><img class="logo" src="images/misc/logo-evolution.png" width="95" alt="img"/></a>
-                        </div>
-                        <li class='last'><a href='index.xhtml'><span>Home</span></a></li>
-                        <li class='last'><a href='index.xhtml'><span>Leitos</span></a></li>
-                        <li class='last'><a href='extra.xhtml'><span>Extra</span></a></li>
-                        <li class='last'><a href='isolado.xhtml'><span>Isolado</span></a></li>
-                        <li class='last'><a href='frase.xhtml'><span>Cadastro Frase</span></a></li>
-                        <li class='last'><a href='#'><span>Visualizar</span></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="page-header-clear"></div>
-            <div class="content">
-                <div class="decoration hide-if-responsive"></div>
-                <div class="container no-bottom">
-                    <h:form>
-                        <p:dataTable var="frase"
-                                     emptyMessage="Nenhuma Avaliação Cadastrada"
-                                     value="#{avaliacaoMB.carregaLista()}">
-
-                            <p:column headerText="Avaliações">
-                                <h:outputText value="#{frase.descricao}" />
-                            </p:column>
-
-                            <p:column headerText="Editar">
-                                <p:commandButton value="Editar"
-
-                                                 styleClass="btn btn-blue"
-                                                 actionListener="#{fraseMB.editar(frase.idFrase)}" />
-                            </p:column>
-
-                            <p:column headerText="Excluir">
-                                <p:commandButton value="Excluir"
-
-                                                 styleClass="btn btn-red"
-                                                 actionListener="#{fraseMB.excluir(frase.idFrase)}" />
-                            </p:column>
-
-                        </p:dataTable>
-                        <div class="one-half-responsive">   
-                            <p:commandButton 
-                                action="formulario.xhtml"
-                                id="contactSubmitButton" 
-                                value="Nova Avaliação" 
-                                styleClass="buttonWrap button button-blue contactSubmitButton"
-                                />
-                        </div>
-                    </h:form>
-                </div>
-            </div> 
-            <div class="clear"></div>       
-=======
 
          <div id="content" class="page-content"> 
 
@@ -196,19 +123,65 @@
                 
 
             <div class="page-header-clear"></div>
-                <div class="container no-bottom">
-                <p:commandButton type="submit"  
-                                 actionListener="#{fraseMB.salvar()}" 
-                                 id="contactSubmitButton" 
-                                 value="Novo" 
-                                 styleClass="buttonWrap button button-blue contactSubmitButton"
-                                   />
-                
-                
-                   
-                </div>           
+
+           
+                <div class="one-half-responsive-center">
+                     <div class=""> 
+                         <p style="text-align:center">Cadastro de Frases</p>
+                    <h:form id="bloco_frase">
+
+                        <div class="formFieldWrap">
+                            
+                            <h:inputHidden  value="#{fraseMB.frase.idFrase}" />
+                            <p:inputText type="text"
+                                         value="#{fraseMB.frase.descricao}"
+                                         styleClass="contactField requiredField requiredEmailField"
+                                         id="contactNameField"/>
+                        </div>
+
+
+                        
+                            <p:commandButton type="submit"  
+                                             actionListener="#{fraseMB.salvar()}" 
+                                             id="contactSubmitButton" 
+                                             value="Salvar" 
+                                             styleClass="buttonWrap button button-blue contactSubmitButton"
+                                             />
+                      
+                    </h:form>
+                     </div>
+            </div>   
+            
+             <div class="decoration hide-if-responsive"></div>
+                <div class="one-half-responsive-center">
                     
->>>>>>> 26948465f565f8f69d50adfe2ea89d04199ee2ac:EvolutionMedicE-war/build/web/avaliacao.xhtml
+                    <div class="container no-bottom">
+                        <h:form>
+                            
+                            <p:dataTable var="frase" value="#{fraseMB.carregaLista()}">
+                                <p:column headerText="Frases Cadastradas">
+                                    <h:outputText value="#{frase.descricao}" />
+                                </p:column>
+                                 <p:column headerText="Excluir">
+                                     <p:commandButton value="Excluir"
+                                                      
+                                                      styleClass="btn btn-red"
+                                                      actionListener="#{fraseMB.excluir(frase.idFrase)}" />
+                                </p:column>
+                                 <p:column headerText="Editar">
+                                     <p:commandButton value="Editar"
+                                                      
+                                                      styleClass="btn btn-blue"
+                                                      actionListener="#{fraseMB.editar()}" />
+                                </p:column>
+                                
+                        </p:dataTable>
+                        </h:form>
+                     </div>
+                   
+                </div> 
+                <div class="clear"></div>
+
         </div>  
     </body>
 </html>

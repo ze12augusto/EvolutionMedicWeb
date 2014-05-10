@@ -40,11 +40,22 @@
         <script type="text/javascript" src="scripts/framework.launcher.js"></script>
     </head>
     <body>
+<<<<<<< HEAD
         #{criadorDadosPadrao.criadorTipoLeito()}    
         <div id="preloader">
             <div id="status">
             </div>
         </div>
+=======
+         #{criadorDadosPadrao.criadorTipoLeito()}    
+        <div id="preloader">
+            <div id="status">
+                
+            </div>
+        </div>
+
+
+>>>>>>> 26948465f565f8f69d50adfe2ea89d04199ee2ac
         <div class="all-elements">
             <div id="sidebar" class="page-sidebar">
                 <div class="page-sidebar-scroll">
@@ -52,6 +63,10 @@
                         <a href="https://google.com" class="shortcut-search"></a>
                         <a href="#" class="shortcut-close"></a>
                     </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 26948465f565f8f69d50adfe2ea89d04199ee2ac
                     <div class="sidebar-search">
                         <div class="search-box">
                             <input type="text" class="search-field" name="search" onfocus="if (this.value == 'Looking for something?') {
@@ -60,6 +75,10 @@
                             <a href="#" class="search-close"></a>
                         </div>
                     </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 26948465f565f8f69d50adfe2ea89d04199ee2ac
                     <div class="sidebar-logo">
                         <img src="images/misc/logo-evolutionMedic.png" height="90" alt="img"/>
                     </div>
@@ -97,6 +116,7 @@
                     <div class="sidebar-decoration"></div>
                 </div>         
             </div>
+<<<<<<< HEAD
             <!--             <div class="page-header hide-if-responsive" style="margin-bottom: 20px;">
                     <a href="#" class="deploy-sidebar"></a>
                     <img class="header-logo" src="images/misc/logo-evolution.png" width="71" alt="img"/>
@@ -168,10 +188,81 @@
                     </h:form>
                 </div>
                 <div class="one-half-responsive-avalia last-column">
+=======
+        </div>
+
+         <div id="content" class="page-content"> 
+
+                <div class="page-header hide-if-responsive" style="margin-bottom: 20px;">
+                    <a href="#" class="deploy-sidebar"></a>
+                    <img class="header-logo" src="images/misc/logo-evolution.png" width="71" alt="img"/>
+                </div>
+                
+                <div class="page-header hide-if-mobile" style="margin-bottom: 20px;">
+                        
+                    <div id="cssmenu">
+                        <ul>
+                            <div class="logo">
+                                <a href='index.xhtml'><img src="images/misc/logo-evolution.png" width="95" alt="img"/></a>
+                    </div>
+                            <li class='last'><a href='index.xhtml'><span>Home</span></a></li>
+                            <li class='last'><a href='index.xhtml'><span>Leitos</span></a></li>
+                            <li class='last'><a href='extra.xhtml'><span>Extra</span></a></li>
+                            <li class='last'><a href='isolado.xhtml'><span>Isolado</span></a></li>
+                            <li class='last'><a href='frase.xhtml'><span>Cadastro Frase</span></a></li>
+                            <li class='last'><a href='#'><span>Imprimir Relatório</span></a></li>
+                           
+                        </ul>
+                    </div>
+                </div>
+             
+             <div class="content">
+             <div class="container no-bottom">
+                <div class="one-half-responsive">
+                    <p style="text-align:center">Dados Paciente</p>
+                        <h:form class="bloco_frase" id="bloco_frase">
+
+                             <h:outputLabel for="nome" value="Nome:" />  
+                             <p:inputText id="nomePaciente"
+                                          value=""
+                                          styleClass="contactField"
+                                          label="nome" />  
+
+                              <h:outputLabel for="medico" value="Médico:" />  
+                              <p:inputText id="nomeMedico"
+                                          value=""
+                                          styleClass="contactField"
+                                          label="medico" />  
+
+                               <h:outputLabel for="data" value="Data:" />  
+                               <p:inputText id="data"
+                                          value=""
+                                          styleClass="contactField"
+                                          label="data" />  
+                               
+                                <p style="text-align:center">Registro de Avaliação</p>
+                                                     
+                         
+                                <p:autoComplete value="#{f}" />
+                                              
+                            <p:commandButton type="submit"  
+                                             actionListener="#{fraseMB.salvar()}" 
+                                             id="contactSubmitButton" 
+                                             value="Salvar" 
+                                             styleClass="button button-blue contactSubmitButton"
+                                             update="bloco_frase"/>
+                        </h:form>
+                   
+                </div>
+                <div class="decoration hide-if-responsive"></div>
+                <div class="one-half-responsive-avalia last-column">
+                    
+>>>>>>> 26948465f565f8f69d50adfe2ea89d04199ee2ac
                     <div class="container no-bottom">
                         <h:form style="margin-top: 21px">
                             <p:dataTable var="avaliacao" value="#{fraseMB.carregaLista()}">
                                 <p:column headerText="Avaliação">
+<<<<<<< HEAD
                                     <h:outputText value="#{avaliacao.descricao}" />
                                 </p:column>
                             </p:dataTable>
@@ -181,5 +272,19 @@
                 <div class="clear"></div>
             </div>
         </div>       
+=======
+                                     <h:outputText value="#{avaliacao.descricao}" />
+                                </p:column>
+                        </p:dataTable>
+                        </h:form>
+                     </div>
+                   
+                </div> 
+                <div class="clear"></div>
+            </div>
+         </div>
+         </div>       
+         
+>>>>>>> 26948465f565f8f69d50adfe2ea89d04199ee2ac
     </body>
 </html>

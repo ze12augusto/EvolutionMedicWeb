@@ -3,8 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/D:/EvolutionMedic/evolution/EvolutionMedicWeb/EvolutionMedicE-war/web/index.xhtml</file>
             <file>file:/D:/EvolutionMedic/evolution/EvolutionMedicWeb/EvolutionMedicE-war/web/avaliacao.xhtml</file>
+=======
+            <file>file:/D:/EvolutionMedic/evolution/EvolutionMedicWeb/EvolutionMedicE-war/web/avaliacao.xhtml</file>
+            <file>file:/D:/EvolutionMedic/evolution/EvolutionMedicWeb/EvolutionMedicE-war/web/styles/framework.css</file>
+>>>>>>> 26948465f565f8f69d50adfe2ea89d04199ee2ac
             <file>file:/D:/EvolutionMedic/evolution/EvolutionMedicWeb/EvolutionMedicE-war/web/formulario.xhtml</file>
             <file>file:/D:/EvolutionMedic/evolution/EvolutionMedicWeb/EvolutionMedicE-war/web/frase.xhtml</file>
         </group>

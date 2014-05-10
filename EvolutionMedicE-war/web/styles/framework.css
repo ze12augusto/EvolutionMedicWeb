@@ -51,6 +51,7 @@ a:hover{
 }
 
 div, a, p, img, blockquote, form, fieldset, textarea, input, label, iframe, code, pre, autoComplete {
+<<<<<<< HEAD
     display: block;
     overflow:hidden;
     position:relative;
@@ -62,6 +63,18 @@ p {
     font-size: 14px;
     letter-spacing: 2px;
     margin-top: 24px;
+=======
+	display: block;
+	overflow:hidden;
+	position:relative;
+}
+
+p {
+	line-height: 21px;
+	margin-bottom: 11px;
+	font-size: 14px;
+	letter-spacing: 2px;
+>>>>>>> 26948465f565f8f69d50adfe2ea89d04199ee2ac
 }
 
 p > a {
@@ -219,9 +232,15 @@ h5{
 }
 
 h1, h2, h3, h4, h5, h6{
+<<<<<<< HEAD
     font-family: sans-serif;
     color:#fff;
     font-size: 12px;
+=======
+	font-family: sans-serif;
+	color:#000;
+        font-size: 14px;
+>>>>>>> 26948465f565f8f69d50adfe2ea89d04199ee2ac
 }
 
 a{
@@ -365,8 +384,13 @@ a:hover{
 }
 
 .last-column{
+<<<<<<< HEAD
     margin-right:0%!important;
 
+=======
+	margin-right:0%!important;
+        
+>>>>>>> 26948465f565f8f69d50adfe2ea89d04199ee2ac
 }
 
 .one-third{
@@ -396,6 +420,7 @@ a:hover{
 }
 
 @media (min-width:760px) { 
+<<<<<<< HEAD
     .one-third-responsive{
         width:28%;
         float:left;
@@ -422,6 +447,34 @@ a:hover{
     .hide-if-responsive{
         display:none;
     }
+=======
+	.one-third-responsive{
+		width:28%;
+		float:left;
+		margin-right:8%;	
+	}
+	
+	.one-half-responsive{
+		width: 40%;
+		float:left;
+		
+	}
+        
+        .one-half-responsive-center{
+		width: 40%;
+		margin: 0 auto;
+		
+	}
+        .one-half-responsive-avalia{
+		width: 58%;
+		margin: 0 auto;
+		
+	}
+	
+	.hide-if-responsive{
+		display:none;
+	}
+>>>>>>> 26948465f565f8f69d50adfe2ea89d04199ee2ac
 
 }
 
@@ -469,6 +522,9 @@ a:hover{
 .btn:hover{
     opacity:0.8;
 }
+.btn:hover{
+	opacity:0.8;
+}
 
 .button-big:hover{
     color:#000;
@@ -490,6 +546,7 @@ a:hover{
 }
 
 .button{
+<<<<<<< HEAD
     text-align:center;
     color:#FFFFFF;
     padding:8px 13px;
@@ -506,7 +563,24 @@ a:hover{
     padding:2px 10px;
     display:inline-block;	
     border-radius: 3px 3px 3px 3px;
+=======
+	text-align:center;
+	color:#FFFFFF;
+	padding:8px 13px;
+	display:inline-block;	
+	margin-bottom:2px;
+	margin-left:2px;
+	float: left;
+>>>>>>> 26948465f565f8f69d50adfe2ea89d04199ee2ac
 }
+
+.btn{
+	text-align:center;
+	color:#FFFFFF;
+	padding:2px 10px;
+	display:inline-block;	
+        border-radius: 3px 3px 3px 3px;
+	}
 
 .button-big{
     text-align:center;
@@ -881,6 +955,7 @@ a:hover{
 }
 
 table {
+<<<<<<< HEAD
     font-size:10px;
     text-shadow: 1px 1px 0px #fff;
     background:#eaebec;
@@ -919,6 +994,46 @@ table tr td {
     border-top: 1px solid #ffffff;
     border-bottom:1px solid #e0e0e0;
     border-left: 0px solid #e0e0e0;
+=======
+	font-size:10px;
+	text-shadow: 1px 1px 0px #fff;
+	background:#eaebec;
+	border:#ccc 1px solid;
+	margin-bottom:15px;
+        border-radius: 5px 5px 5px 5px;
+}
+
+table th {
+	padding:8px 15px 8px 8px;
+	border-bottom:1px solid #e0e0e0;
+        border-radius: 5px 5px 5px 5px;
+}
+
+table th:first-child{
+	text-align: center;
+	padding-left:20px;
+        border-radius: 5px 5px 5px 5px;
+}
+
+table tr{
+	text-align: center;
+	padding-left:20px;
+        
+}
+
+table tr td:first-child{
+	text-align: left;
+	padding-left:20px;
+	border-left: 0;
+        border-radius: 5px 5px 5px 5px;
+}
+
+table tr td {
+	padding:6px;
+	border-top: 1px solid #ffffff;
+	border-bottom:1px solid #e0e0e0;
+	border-left: 0px solid #e0e0e0;
+>>>>>>> 26948465f565f8f69d50adfe2ea89d04199ee2ac
 }
 
 table tr.even td{
@@ -1650,6 +1765,21 @@ table tr:hover td{
     border-radius: 4px 4px 4px 4px;
 }
 
+.ui-autocomplete-input{
+    background-color:rgba(255,255,255,0.4);
+	font-size:12px;
+	color:#666;
+	border:solid 1px #cacaca;
+        min-width:100%;	
+	display:block;
+	box-sizing:border-box;
+        height:35px;
+	padding-left:10px;
+	padding-right:10px;
+	margin-bottom:10px;
+        border-radius: 4px 4px 4px 4px;
+}
+
 .contactTextarea{
     background-color:rgba(255,255,255,0.4);
     font-size:12px;
@@ -1741,11 +1871,19 @@ span{font-family: sans-serif !Important;}
 }
 
 .contactField{
+<<<<<<< HEAD
     height:35px;
     padding-left:10px;
     padding-right:10px;
     margin-bottom:10px;
     border-radius: 4px 4px 4px 4px;
+=======
+	height:35px;
+	padding-left:10px;
+	padding-right:10px;
+	margin-bottom:10px;
+        border-radius: 4px 4px 4px 4px;
+>>>>>>> 26948465f565f8f69d50adfe2ea89d04199ee2ac
 }
 
 .contactTextarea{
@@ -1856,6 +1994,11 @@ span{font-family: sans-serif !Important;}
 }
 
 .recent-post p em{
+<<<<<<< HEAD
     font-style:normal;	
     color:#666;
+=======
+	font-style:normal;	
+	color:#666;
+>>>>>>> 26948465f565f8f69d50adfe2ea89d04199ee2ac
 }
