@@ -39,14 +39,11 @@
         <script type="text/javascript" src="scripts/framework.launcher.js"></script>
     </head>
     <body>
-      #{criadorDadosPadrao.criadorTipoLeito()}    
+        #{criadorDadosPadrao.criadorTipoLeito()}    
         <div id="preloader">
             <div id="status">
-                
             </div>
         </div>
-
-
         <div class="all-elements">
             <div id="sidebar" class="page-sidebar">
                 <div class="page-sidebar-scroll">
@@ -92,7 +89,7 @@
                     </div>
                     <div class="sidebar-decoration"></div>
                     <div class="navigation-item">
-                        <a href="#" class="nav-item impress-icon">Imprimir Relatório<em class="unselected-item"></em></a>
+                        <a href="#" class="nav-item impress-icon">Visualizar<em class="unselected-item"></em></a>
                     </div>
                     <div class="sidebar-decoration"></div>
                     <div class="navigation-item">
@@ -101,42 +98,39 @@
                     <div class="sidebar-decoration"></div>
                 </div>         
             </div>
+            <!--             <div class="page-header hide-if-responsive" style="margin-bottom: 20px;">
+                                <a href="#" class="deploy-sidebar"></a>
+                                <img class="header-logo" src="images/misc/logo-evolution.png" width="71" alt="img"/>
+                            </div>-->
         </div>
+        <div id="content" class="page-content"> 
 
-         <div id="content" class="page-content"> 
-
-                <div class="page-header hide-if-responsive" style="margin-bottom: 20px;">
-                    <a href="#" class="deploy-sidebar"></a>
-                    <img class="header-logo" src="images/misc/logo-evolution.png" width="71" alt="img"/>
+            <div class="page-header hide-if-responsive" style="margin-bottom: 20px;">
+                <a href="#" class="deploy-sidebar"></a>
+                <img class="header-logo" src="images/misc/logo-evolution.png" width="71" alt="img"/>
+            </div>
+            <div class="page-header hide-if-mobile" style="margin-bottom: 20px;">
+                <div id="cssmenu">
+                    <ul>
+                        <div class="logo">
+                            <a href='index.xhtml'><img class="logo" src="images/misc/logo-evolution.png" width="95" alt="img"/></a>
+                        </div>
+                        <li class='last'><a href='index.xhtml'><span>Home</span></a></li>
+                        <li class='last'><a href='index.xhtml'><span>Leitos</span></a></li>
+                        <li class='last'><a href='extra.xhtml'><span>Extra</span></a></li>
+                        <li class='last'><a href='isolado.xhtml'><span>Isolado</span></a></li>
+                        <li class='last'><a href='frase.xhtml'><span>Cadastro Frase</span></a></li>
+                        <li class='last'><a href='#'><span>Visualizar</span></a></li>
+                    </ul>
                 </div>
-                
-                <div class="page-header hide-if-mobile" style="margin-bottom: 20px;">
-                        
-                    <div id="cssmenu">
-                        <ul>
-                            <div class="logo">
-                                <a href='index.xhtml'><img src="images/misc/logo-evolution.png"/></a>
-                    </div>
-                            <li class='last'><a href='index.xhtml'><span>Home</span></a></li>
-                            <li class='last'><a href='index.xhtml'><span>Leitos</span></a></li>
-                            <li class='last'><a href='extra.xhtml'><span>Extra</span></a></li>
-                            <li class='last'><a href='isolado.xhtml'><span>Isolado</span></a></li>
-                            <li class='last'><a href='frase.xhtml'><span>Cadastro Frase</span></a></li>
-                            <li class='last'><a href='#'><span>Imprimir Relatório</span></a></li>
-                           
-                        </ul>
-                    </div>
-                </div>
-                
-                
-                <div class="page-header-clear"></div>
-
+            </div>
+            <div class="page-header-clear"></div>
             <div class="decoration"></div> 
-            <div class="slider-container">
+            <div class="one-half-web hide-if-mobile">
                 <h:form>
                     <h:commandLink action="avalizacao.xhtml">    
                         <div class="bloco">
-                             <img src="images/icons/misc/universalaccess.png" class="bloco_img"/>
+                            <img src="images/icons/misc/universalaccess.png" class="bloco_img"/>
                             <h3>ISOLADO 01</h3> 
                         </div>    
                     </h:commandLink>
@@ -150,7 +144,7 @@
 
                     <h:commandLink action="avalizacao.xhtml">    
                         <div class="bloco">
-                             <img src="images/icons/misc/universalaccess.png" class="bloco_img"/>
+                            <img src="images/icons/misc/universalaccess.png" class="bloco_img"/>
                             <h3>ISOLADO 03</h3> 
                         </div>    
                     </h:commandLink>
@@ -162,6 +156,37 @@
                         </div>    
                     </h:commandLink>
                 </h:form>      
+            </div>  
+            <div class="one-half hide-if-responsive">
+                <h:form>
+                    <h:commandLink action="avalizacao.xhtml">    
+                        <div class="bloco_mobile">
+                            <img src="images/icons/misc/universalaccess.png" class="bloco_mobile_img"/>
+                            <h3>ISOLADO 01</h3> 
+                        </div>    
+                    </h:commandLink>
+
+                    <h:commandLink action="avalizacao.xhtml">    
+                        <div class="bloco_mobile">
+                            <img src="images/icons/misc/universalaccess.png" class="bloco_mobile_img"/>
+                            <h3>ISOLADO 02</h3> 
+                        </div>    
+                    </h:commandLink>
+
+                    <h:commandLink action="avalizacao.xhtml">    
+                        <div class="bloco_mobile">
+                            <img src="images/icons/misc/universalaccess.png" class="bloco_mobile_img"/>
+                            <h3>ISOLADO 03</h3> 
+                        </div>    
+                    </h:commandLink>
+
+                    <h:commandLink action="avalizacao.xhtml">    
+                        <div class="bloco_mobile">
+                            <img src="images/icons/misc/universalaccess.png" class="bloco_mobile_img"/>
+                            <h3>ISOLADO 04</h3> 
+                        </div>    
+                    </h:commandLink>
+                </h:form>
             </div>  
         </div>
     </body>

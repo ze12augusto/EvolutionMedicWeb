@@ -28,9 +28,9 @@ public class FraseEJB {
         return null;
     }
 
-    public String excluir(Frase frase) {
+    public String excluir(Integer id) {
         try {
-            frase = em.getReference(Frase.class, frase.getIdFrase());
+            Frase frase = em.getReference(Frase.class, id);
             em.remove(frase);
         } catch (Exception e) {
             return e.getMessage();
@@ -46,8 +46,7 @@ public class FraseEJB {
     }
 
     public List<Frase> listaTodos() {
-        TypedQuery<Frase> query = em.createQuery("select f From Frase f",
-                Frase.class);
-        return query.getResultList();
+        
+      return em.createNamedQuery("Frase.findAll").getResultList();
     }
 }

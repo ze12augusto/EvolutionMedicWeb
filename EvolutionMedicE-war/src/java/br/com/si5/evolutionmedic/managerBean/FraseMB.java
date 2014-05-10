@@ -64,8 +64,8 @@ public class FraseMB {
         return frase = fEJB.selecionaPorID(id);
     }
 
-    public void Excluir(Frase frase) {
-        String erro = fEJB.excluir(frase);
+    public void excluir(Integer id) {
+        String erro = fEJB.excluir(id);
         if (erro == null) {
             FacesContext fc = FacesContext.getCurrentInstance();
             fc.addMessage(null, new FacesMessage("Excluída com sucesso!"));
@@ -73,5 +73,9 @@ public class FraseMB {
             FacesContext fc = FacesContext.getCurrentInstance();
             fc.addMessage(null, new FacesMessage("Erro ao tentar excluir!"));
         }
+    }
+    
+    public void editar(Integer id){
+        frase = selecionaPorID(id);
     }
 }

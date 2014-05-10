@@ -28,9 +28,9 @@ public class AvaliacaoEJB {
         return null;
     }
 
-    public String excluir(Avaliacao avaliacao) {
+    public String excluir(Integer id) {
         try {
-            avaliacao = em.getReference(Avaliacao.class, avaliacao.getIdAvaliacao());
+            Avaliacao avaliacao = em.getReference(Avaliacao.class, id);
             em.remove(avaliacao);
         } catch (Exception e) {
             return e.getMessage();
@@ -51,4 +51,5 @@ public class AvaliacaoEJB {
                 Avaliacao.class);
         return query.getResultList();
     }
+
 }
