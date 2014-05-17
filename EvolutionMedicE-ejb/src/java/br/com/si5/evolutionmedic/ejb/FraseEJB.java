@@ -44,6 +44,7 @@ public class FraseEJB {
         query.setParameter("id", id);
         return query.getSingleResult();
     }
+<<<<<<< HEAD
     
     public Frase selecionaPorDescricao(String nome) {
         TypedQuery<Frase> query = em.createQuery("select f From Frase f where f.descricao = :nome",
@@ -57,6 +58,12 @@ public class FraseEJB {
                 Frase.class);
         query.setParameter("nome", '%'+nome+'%');
         return query.getResultList();
+=======
+
+    public List<Frase> listaTodos() {
+        
+      return em.createNamedQuery("Frase.findAll").getResultList();
+>>>>>>> d1d777f11263432c590b5b0295dbf6123d4de861
     }
 
     public List<Frase> listaTodos() {

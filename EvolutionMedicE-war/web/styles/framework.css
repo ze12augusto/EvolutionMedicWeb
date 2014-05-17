@@ -51,6 +51,7 @@ a:hover{
 }
 
 div, a, p, img, blockquote, form, fieldset, textarea, input, label, iframe, code, pre, autoComplete {
+<<<<<<< HEAD
     display: block;
     overflow:hidden;
     position:relative;
@@ -62,6 +63,32 @@ p {
     font-size: 14px;
     letter-spacing: 2px;
     margin-top: 24px;
+=======
+<<<<<<< HEAD
+    display: block;
+    overflow:hidden;
+    position:relative;
+}
+
+p {
+    line-height: 21px;
+    margin-bottom: 11px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-top: 24px;
+=======
+	display: block;
+	overflow:hidden;
+	position:relative;
+}
+
+p {
+	line-height: 21px;
+	margin-bottom: 11px;
+	font-size: 14px;
+	letter-spacing: 2px;
+>>>>>>> 26948465f565f8f69d50adfe2ea89d04199ee2ac
+>>>>>>> d1d777f11263432c590b5b0295dbf6123d4de861
 }
 
 p > a {
@@ -105,7 +132,10 @@ table {
     border-top: 1px solid #e9e9e9;
     width: 100%;
     clear: both;
+<<<<<<< HEAD
     margin-top: 10px;
+=======
+>>>>>>> d1d777f11263432c590b5b0295dbf6123d4de861
     margin-bottom: 27px;
 }
 
@@ -220,9 +250,21 @@ h5{
 }
 
 h1, h2, h3, h4, h5, h6{
+<<<<<<< HEAD
     font-family: sans-serif;
     color:#fff;
     font-size: 12px;
+=======
+<<<<<<< HEAD
+    font-family: sans-serif;
+    color:#fff;
+    font-size: 12px;
+=======
+	font-family: sans-serif;
+	color:#000;
+        font-size: 14px;
+>>>>>>> 26948465f565f8f69d50adfe2ea89d04199ee2ac
+>>>>>>> d1d777f11263432c590b5b0295dbf6123d4de861
 }
 
 a{
@@ -230,7 +272,11 @@ a{
 }
 
 a:hover{
+<<<<<<< HEAD
     color:#fff;
+=======
+    color:#0099cc;
+>>>>>>> d1d777f11263432c590b5b0295dbf6123d4de861
 }
 
 /*////////////////////////*/
@@ -240,7 +286,10 @@ a:hover{
 .content{width: 92%;
          margin-left:auto;
          margin-right:auto;
+<<<<<<< HEAD
          margin-top: 28px;
+=======
+>>>>>>> d1d777f11263432c590b5b0295dbf6123d4de861
 }
 
 .container{
@@ -339,7 +388,11 @@ a:hover{
     left:50%; 
     top:50%; 
     background-image:url(../images/status.gif); 
+<<<<<<< HEAD
     background-size:70px 70px;
+=======
+    background-size:32px 32px;
+>>>>>>> d1d777f11263432c590b5b0295dbf6123d4de861
     background-repeat:no-repeat;
     background-position:center;
     margin:-125px 0 0 -125px; 
@@ -367,8 +420,18 @@ a:hover{
 }
 
 .last-column{
+<<<<<<< HEAD
     margin-right:0%!important;
 
+=======
+<<<<<<< HEAD
+    margin-right:0%!important;
+
+=======
+	margin-right:0%!important;
+        
+>>>>>>> 26948465f565f8f69d50adfe2ea89d04199ee2ac
+>>>>>>> d1d777f11263432c590b5b0295dbf6123d4de861
 }
 
 .one-third{
@@ -398,6 +461,10 @@ a:hover{
 }
 
 @media (min-width:760px) { 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d1d777f11263432c590b5b0295dbf6123d4de861
     .one-third-responsive{
         width:28%;
         float:left;
@@ -406,7 +473,10 @@ a:hover{
 
     .one-half-responsive{
         width: 40%;
+<<<<<<< HEAD
         margin-top: 5px;
+=======
+>>>>>>> d1d777f11263432c590b5b0295dbf6123d4de861
         float:left;
 
     }
@@ -425,6 +495,37 @@ a:hover{
     .hide-if-responsive{
         display:none;
     }
+<<<<<<< HEAD
+=======
+=======
+	.one-third-responsive{
+		width:28%;
+		float:left;
+		margin-right:8%;	
+	}
+	
+	.one-half-responsive{
+		width: 40%;
+		float:left;
+		
+	}
+        
+        .one-half-responsive-center{
+		width: 40%;
+		margin: 0 auto;
+		
+	}
+        .one-half-responsive-avalia{
+		width: 58%;
+		margin: 0 auto;
+		
+	}
+	
+	.hide-if-responsive{
+		display:none;
+	}
+>>>>>>> 26948465f565f8f69d50adfe2ea89d04199ee2ac
+>>>>>>> d1d777f11263432c590b5b0295dbf6123d4de861
 
 }
 
@@ -471,6 +572,12 @@ a:hover{
 }
 .btn:hover{
     opacity:0.8;
+<<<<<<< HEAD
+=======
+}
+.btn:hover{
+	opacity:0.8;
+>>>>>>> d1d777f11263432c590b5b0295dbf6123d4de861
 }
 
 .button-big:hover{
@@ -493,6 +600,10 @@ a:hover{
 }
 
 .button{
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d1d777f11263432c590b5b0295dbf6123d4de861
     text-align:center;
     color:#FFFFFF;
     padding:8px 13px;
@@ -509,8 +620,30 @@ a:hover{
     padding:2px 10px;
     display:inline-block;	
     border-radius: 3px 3px 3px 3px;
+<<<<<<< HEAD
 }
 
+=======
+=======
+	text-align:center;
+	color:#FFFFFF;
+	padding:8px 13px;
+	display:inline-block;	
+	margin-bottom:2px;
+	margin-left:2px;
+	float: left;
+>>>>>>> 26948465f565f8f69d50adfe2ea89d04199ee2ac
+}
+
+.btn{
+	text-align:center;
+	color:#FFFFFF;
+	padding:2px 10px;
+	display:inline-block;	
+        border-radius: 3px 3px 3px 3px;
+	}
+
+>>>>>>> d1d777f11263432c590b5b0295dbf6123d4de861
 .button-big{
     text-align:center;
     color:#FFFFFF;
@@ -884,12 +1017,17 @@ a:hover{
 }
 
 table {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d1d777f11263432c590b5b0295dbf6123d4de861
     font-size:10px;
     text-shadow: 1px 1px 0px #fff;
     background:#eaebec;
     border:#ccc 1px solid;
     margin-bottom:15px;
     border-radius: 5px 5px 5px 5px;
+<<<<<<< HEAD
 }
 
 table th {
@@ -922,6 +1060,80 @@ table tr td {
     border-top: 1px solid #ffffff;
     border-bottom:1px solid #e0e0e0;
     border-left: 0px solid #e0e0e0;
+=======
+}
+
+table th {
+    padding:8px 15px 8px 8px;
+    border-bottom:1px solid #e0e0e0;
+    border-radius: 5px 5px 5px 5px;
+}
+
+table th:first-child{
+    text-align: center;
+    padding-left:20px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+table tr{
+    text-align: center;
+    padding-left:20px;
+
+}
+
+table tr td:first-child{
+    text-align: left;
+    padding-left:20px;
+    border-left: 0;
+    border-radius: 5px 5px 5px 5px;
+}
+
+table tr td {
+    padding:6px;
+    border-top: 1px solid #ffffff;
+    border-bottom:1px solid #e0e0e0;
+    border-left: 0px solid #e0e0e0;
+=======
+	font-size:10px;
+	text-shadow: 1px 1px 0px #fff;
+	background:#eaebec;
+	border:#ccc 1px solid;
+	margin-bottom:15px;
+        border-radius: 5px 5px 5px 5px;
+}
+
+table th {
+	padding:8px 15px 8px 8px;
+	border-bottom:1px solid #e0e0e0;
+        border-radius: 5px 5px 5px 5px;
+}
+
+table th:first-child{
+	text-align: center;
+	padding-left:20px;
+        border-radius: 5px 5px 5px 5px;
+}
+
+table tr{
+	text-align: center;
+	padding-left:20px;
+        
+}
+
+table tr td:first-child{
+	text-align: left;
+	padding-left:20px;
+	border-left: 0;
+        border-radius: 5px 5px 5px 5px;
+}
+
+table tr td {
+	padding:6px;
+	border-top: 1px solid #ffffff;
+	border-bottom:1px solid #e0e0e0;
+	border-left: 0px solid #e0e0e0;
+>>>>>>> 26948465f565f8f69d50adfe2ea89d04199ee2ac
+>>>>>>> d1d777f11263432c590b5b0295dbf6123d4de861
 }
 
 table tr.even td{
@@ -1651,6 +1863,24 @@ table tr:hover td{
     padding-right:10px;
     margin-bottom:10px;
     border-radius: 4px 4px 4px 4px;
+<<<<<<< HEAD
+=======
+}
+
+.ui-autocomplete-input{
+    background-color:rgba(255,255,255,0.4);
+	font-size:12px;
+	color:#666;
+	border:solid 1px #cacaca;
+        min-width:100%;	
+	display:block;
+	box-sizing:border-box;
+        height:35px;
+	padding-left:10px;
+	padding-right:10px;
+	margin-bottom:10px;
+        border-radius: 4px 4px 4px 4px;
+>>>>>>> d1d777f11263432c590b5b0295dbf6123d4de861
 }
 
 .contactTextarea{
@@ -1725,7 +1955,11 @@ span{font-family: sans-serif !Important;}
 .buttonWrap{
     line-height:20px;
     padding-bottom:24px;
+<<<<<<< HEAD
     min-width:44%;
+=======
+    min-width:40%;
+>>>>>>> d1d777f11263432c590b5b0295dbf6123d4de861
     display:inline-block;
 }
 
@@ -1744,11 +1978,25 @@ span{font-family: sans-serif !Important;}
 }
 
 .contactField{
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d1d777f11263432c590b5b0295dbf6123d4de861
     height:35px;
     padding-left:10px;
     padding-right:10px;
     margin-bottom:10px;
     border-radius: 4px 4px 4px 4px;
+<<<<<<< HEAD
+=======
+=======
+	height:35px;
+	padding-left:10px;
+	padding-right:10px;
+	margin-bottom:10px;
+        border-radius: 4px 4px 4px 4px;
+>>>>>>> 26948465f565f8f69d50adfe2ea89d04199ee2ac
+>>>>>>> d1d777f11263432c590b5b0295dbf6123d4de861
 }
 
 .contactTextarea{
@@ -1859,6 +2107,16 @@ span{font-family: sans-serif !Important;}
 }
 
 .recent-post p em{
+<<<<<<< HEAD
     font-style:normal;	
     color:#666;
+=======
+<<<<<<< HEAD
+    font-style:normal;	
+    color:#666;
+=======
+	font-style:normal;	
+	color:#666;
+>>>>>>> 26948465f565f8f69d50adfe2ea89d04199ee2ac
+>>>>>>> d1d777f11263432c590b5b0295dbf6123d4de861
 }

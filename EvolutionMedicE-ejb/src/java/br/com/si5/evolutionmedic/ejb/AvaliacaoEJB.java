@@ -1,6 +1,7 @@
 package br.com.si5.evolutionmedic.ejb;
 
 import br.com.si5.evolutionmedic.entidades.Avaliacao;
+import br.com.si5.evolutionmedic.entidades.Frase;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -52,4 +53,13 @@ public class AvaliacaoEJB {
         return query.getResultList();
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    public String salvar(Frase frase) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+>>>>>>> 26948465f565f8f69d50adfe2ea89d04199ee2ac
+>>>>>>> d1d777f11263432c590b5b0295dbf6123d4de861
 }

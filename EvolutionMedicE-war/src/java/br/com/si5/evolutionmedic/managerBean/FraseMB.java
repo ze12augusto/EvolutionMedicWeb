@@ -20,6 +20,7 @@ public class FraseMB {
     @EJB
     private FraseEJB fEJB;
     private Frase frase;
+    private Frase fraseSelecionada;
     private List<Frase> listaParaCarregar;
 
     public FraseMB() {
@@ -78,8 +79,29 @@ public class FraseMB {
             fc.addMessage(null, new FacesMessage("Erro ao tentar excluir!"));
         }
     }
+<<<<<<< HEAD
     
     public void editar(Integer id){
         frase = selecionaPorID(id);
+=======
+<<<<<<< HEAD
+    
+    public void editar(Integer id){
+        frase = selecionaPorID(id);
+=======
+
+    public Frase getFraseSelecionada() {
+        return fraseSelecionada;
+    }
+
+    public void setFraseSelecionada(Frase fraseSelecionada) {
+        this.fraseSelecionada = fraseSelecionada;
+    }
+    
+    public void editar(){
+    
+        frase = fraseSelecionada;
+>>>>>>> 26948465f565f8f69d50adfe2ea89d04199ee2ac
+>>>>>>> d1d777f11263432c590b5b0295dbf6123d4de861
     }
 }

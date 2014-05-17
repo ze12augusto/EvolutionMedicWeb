@@ -1,6 +1,7 @@
 package br.com.si5.evolutionmedic.managerBean;
 
 import br.com.si5.evolutionmedic.ejb.AvaliacaoEJB;
+<<<<<<< HEAD
 import br.com.si5.evolutionmedic.ejb.LeitoEJB;
 import br.com.si5.evolutionmedic.ejb.FraseEJB;
 import br.com.si5.evolutionmedic.entidades.Avaliacao;
@@ -8,6 +9,9 @@ import br.com.si5.evolutionmedic.entidades.Frase;
 import br.com.si5.evolutionmedic.entidades.Leito;
 import java.util.ArrayList;
 import java.util.Date;
+=======
+import br.com.si5.evolutionmedic.entidades.Avaliacao;
+>>>>>>> d1d777f11263432c590b5b0295dbf6123d4de861
 import java.util.List;
 import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
@@ -24,6 +28,7 @@ import javax.inject.Named;
 public class AvaliacaoMB {
 
     @EJB
+<<<<<<< HEAD
     private AvaliacaoEJB avaliacaoEJB;
     @EJB
     private FraseEJB fraseEjb;
@@ -41,12 +46,21 @@ public class AvaliacaoMB {
         frases = new ArrayList<>();
         avaliacoes = new ArrayList<>();
         leitoEscolhido = "";
+=======
+    private AvaliacaoEJB aEJB;
+    private Avaliacao avaliacao;
+    private List<Avaliacao> listaParaCarregar;
+
+    public AvaliacaoMB() {
+        avaliacao = new Avaliacao();
+>>>>>>> d1d777f11263432c590b5b0295dbf6123d4de861
     }
 
     public Avaliacao getAvaliacao() {
         return avaliacao;
     }
 
+<<<<<<< HEAD
     public List<Frase> getFrases() {
         return frases;
     }
@@ -84,6 +98,19 @@ public class AvaliacaoMB {
         avaliacoes.add(avaliacao);
         leito.setAvaliacaoList(avaliacoes);
         String erro = leitoEjb.salvar(leito);
+=======
+    public List<Avaliacao> getListaParaCarregar() {
+        return listaParaCarregar;
+    }
+
+    public void setListaParaCarregar(List<Avaliacao> listaParaCarregar) {
+        this.listaParaCarregar = listaParaCarregar;
+    }
+
+    public void salvar() {
+
+        String erro = aEJB.salvar(avaliacao);
+>>>>>>> d1d777f11263432c590b5b0295dbf6123d4de861
 
        if (erro == null) {
             FacesMessage fm
@@ -97,6 +124,7 @@ public class AvaliacaoMB {
             FacesContext.getCurrentInstance().addMessage(null, fm);
         }
         avaliacao = new Avaliacao();
+<<<<<<< HEAD
         avaliacoes = new ArrayList<>();
         frases = new ArrayList<>();
     }
@@ -124,6 +152,20 @@ public class AvaliacaoMB {
     
     public void excluir(Integer id) {
         String erro = avaliacaoEJB.excluir(id);
+=======
+    }
+
+    public List<Avaliacao> carregaLista() {
+        return listaParaCarregar = aEJB.listaTodos();
+    }
+
+    public Avaliacao selecionaPorID(Integer id) {
+        return avaliacao = aEJB.selecionaPorID(id);
+    }
+
+    public void excluir(Integer id) {
+        String erro = aEJB.excluir(id);
+>>>>>>> d1d777f11263432c590b5b0295dbf6123d4de861
         if (erro == null) {
             FacesContext fc = FacesContext.getCurrentInstance();
             fc.addMessage(null, new FacesMessage("Excluída com sucesso!"));
