@@ -28,9 +28,9 @@ public class FraseEJB {
         return null;
     }
 
-    public String excluir(Frase frase) {
+    public String excluir(Integer id) {
         try {
-            frase = em.getReference(Frase.class, frase.getIdFrase());
+            Frase frase = em.getReference(Frase.class, id);
             em.remove(frase);
         } catch (Exception e) {
             return e.getMessage();
@@ -44,10 +44,23 @@ public class FraseEJB {
         query.setParameter("id", id);
         return query.getSingleResult();
     }
+    
+    public Frase selecionaPorDescricao(String nome) {
+        TypedQuery<Frase> query = em.createQuery("select f From Frase f where f.descricao = :nome",
+                Frase.class);
+        query.setParameter("nome", nome);
+        return query.getSingleResult();
+    }
+    
+     public List<Frase> selecionaPorNome(String nome) {
+        TypedQuery<Frase> query = em.createQuery("select f From Frase f where f.descricao like :nome",
+                Frase.class);
+        query.setParameter("nome", '%'+nome+'%');
+        return query.getResultList();
+    }
 
     public List<Frase> listaTodos() {
-        TypedQuery<Frase> query = em.createQuery("select f From Frase f",
-                Frase.class);
-        return query.getResultList();
+        
+      return em.createNamedQuery("Frase.findAll").getResultList();
     }
 }
