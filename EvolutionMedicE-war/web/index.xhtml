@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <head>
+
+        <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0"/>
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/splash/splash-icon.png"/>
+        <link rel="apple-touch-startup-image" href="images/splash/splash-screen.png" 			
+              media="screen and (max-device-width: 320px)" />  
+        <link rel="apple-touch-startup-image" href="images/splash/splash-screen@2x.png" 		
+              media="(max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2)" /> 
+        <link rel="apple-touch-startup-image" sizes="640x1096" href="images/splash/splash-screen@3x.png" />
+        <link rel="apple-touch-startup-image" sizes="1024x748" href="images/splash/splash-screen-ipad-landscape" media="screen and (min-device-width : 481px) and (max-device-width : 1024px) and (orientation : landscape)" />
+        <link rel="apple-touch-startup-image" sizes="768x1004" href="images/splash/splash-screen-ipad-portrait.png" media="screen and (min-device-width : 481px) and (max-device-width : 1024px) and (orientation : portrait)" />
+        <link rel="apple-touch-startup-image" sizes="1536x2008" href="images/splash/splash-screen-ipad-portrait-retina.png"   media="(device-width: 768px)	and (orientation: portrait)	and (-webkit-device-pixel-ratio: 2)"/>
+        <link rel="apple-touch-startup-image" sizes="1496x2048" href="images/splash/splash-screen-ipad-landscape-retina.png"   media="(device-width: 768px)	and (orientation: landscape)	and (-webkit-device-pixel-ratio: 2)"/>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic' rel='stylesheet' type='text/css'/>
+        <title>EvolutionMedic</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <link href="styles/style.css"     		rel="stylesheet" type="text/css"/>
+        <link href="styles/framework.css" 		rel="stylesheet" type="text/css"/>
+        <link href="styles/owl.carousel.css" 	 rel="stylesheet" type="text/css"/>
+        <link href="styles/owl.theme.css" 		rel="stylesheet" type="text/css"/>
+        <link href="styles/swipebox.css"		 rel="stylesheet" type="text/css"/>
+        <link href="styles/colorbox.css"		 rel="stylesheet" type="text/css"/>
+
+        <script type="text/javascript" src="scripts/jquery.js"></script>
+        <script type="text/javascript" src="scripts/jqueryui.js"></script>
+        <script type="text/javascript" src="scripts/owl.carousel.min.js"></script>
+        <script type="text/javascript" src="scripts/jquery.swipebox.js"></script>
+        <script type="text/javascript" src="scripts/colorbox.js"></script>
+        <script type="text/javascript" src="scripts/snap.js"></script>
+        <script type="text/javascript" src="scripts/contact.js"></script>
+        <script type="text/javascript" src="scripts/custom.js"></script>
+        <script type="text/javascript" src="scripts/framework.js"></script>
+        <script type="text/javascript" src="scripts/framework.launcher.js"></script>
+    </head>
+    <body>
+
+        #{criadorDadosPadrao.criadorTipoLeito()}    
+        <div id="preloader">
+            <div id="status">
+            </div>
+        </div>
+        <div class="all-elements">
+            <div id="sidebar" class="page-sidebar">
+                <div class="page-sidebar-scroll">
+<!--                    <div class="sidebar-shortcuts">
+                        <a href="https://google.com" class="shortcut-search"></a>
+                        <a href="#" class="shortcut-close"></a>
+                    </div>-->
+                    <div class="sidebar-search">
+                        <div class="search-box">
+                            <input type="text" class="search-field" name="search" onfocus="if (this.value == 'Looking for something?') {
+                                        this.value = '';
+                                    }" value="Looking for something?"/>
+                            <a href="#" class="search-close"></a>
+                        </div>
+                    </div>
+                    <div class="sidebar-logo">
+                        <img src="images/misc/logo-evolutionMedic.png" height="90" alt="img"/>
+                    </div>
+<!--                    <div class="sidebar-decoration"></div>    
+                    <div class="navigation-item">
+                        <a href="index.xhtml" class="nav-item home-icon">Início</a>
+                    </div>    -->
+                    <div class="sidebar-breadcrumb">ACOMODAÇÕES</div>
+                    <div class="navigation-item">
+                        <a href="index.xhtml" class="nav-item leito-icon">Leitos</a>
+                    </div>  
+
+                    <div class="sidebar-decoration"></div>
+                    <div class="navigation-item">
+                        <a href="extra.xhtml" class="nav-item leito-icon">Extra</a>
+                    </div> 
+
+                    <div class="sidebar-decoration"></div>
+                    <div class="navigation-item">
+                        <a href="isolado.xhtml" class="nav-item leito-icon">Isolado</a>
+                    </div>
+                    <div class="sidebar-breadcrumb">CONFIGURAÇÃO</div>
+                    <div class="navigation-item">
+                        <a href="frase.xhtml" class="nav-item frase-icon">Cadastrar Frase</a>
+                    </div>
+                    <div class="sidebar-decoration"></div>
+                    <div class="navigation-item">
+                        <a href="#" class="nav-item impress-icon">Visualizar</a>
+                    </div>
+                    <div class="sidebar-decoration"></div>
+                    <div class="navigation-item">
+                        <a href="www.sair.com" class="nav-item sair-icon hide-if-responsive">Sair</a>
+                    </div>
+                    <div class="sidebar-decoration"></div>
+                </div>         
+            </div>
+                <!--<div class="page-header hide-if-responsive" style="margin-bottom: 20px;">
+                    <a href="#" class="deploy-sidebar"></a>
+                    <img class="header-logo" src="images/misc/logo-evolution.png" width="71" alt="img"/>
+                </div>-->
+        </div>
+        <div id="content" class="page-content"> 
+            <div class="page-header hide-if-responsive" style="margin-bottom: 20px;">
+                <a href="#" class="deploy-sidebar"></a>
+                <img class="header-logo" src="images/misc/logo-evolution.png" width="71" alt="img"/>
+            </div>
+            <div class="page-header hide-if-mobile" style="margin-bottom: 20px;">
+                <div id="cssmenu">
+                    <ul>
+                        <div class="logo">
+                            <a href='index.xhtml'><img class="logo" src="images/misc/logo-evolution.png" width="95" alt="img"/></a>
+                        </div>
+                        <li class='last'><a href='index.xhtml'><span>Home</span></a></li>
+                        <li class='last'><a href='index.xhtml'><span>Leitos</span></a></li>
+                        <li class='last'><a href='extra.xhtml'><span>Extra</span></a></li>
+                        <li class='last'><a href='isolado.xhtml'><span>Isolado</span></a></li>
+                        <li class='last'><a href='frase.xhtml'><span>Cadastro Frase</span></a></li>
+                        <li class='last'><a href='#'><span>Visualizar</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="page-header-clear"></div>
+          
+            <div class="content hide-if-mobile">
+                <h:form>
+                    <h:commandLink action="avaliacao.xhtml">    
+                        <div class="bloco">
+                            <img src="images/misc/universalaccess.png" class="bloco_img"/>
+                            <h3>LEITO 01</h3> 
+                        </div>    
+                    </h:commandLink>
+
+                    <h:commandLink action="avalizacao.xhtml">    
+                        <div class="bloco">
+                            <img src="images/misc/universalaccess.png" class="bloco_img"/>
+                            <h3>LEITO 02</h3> 
+                        </div>    
+                    </h:commandLink>
+
+                    <h:commandLink action="avalizacao.xhtml">    
+                        <div class="bloco">
+                            <img src="images/misc/universalaccess.png" class="bloco_img"/>
+                            <h3>LEITO 03</h3> 
+                        </div>    
+                    </h:commandLink>
+
+                    <h:commandLink action="avalizacao.xhtml">    
+                        <div class="bloco">
+                            <img src="images/misc/universalaccess.png" class="bloco_img"/>
+                            <h3>LEITO 04</h3> 
+                        </div>    
+                    </h:commandLink>
+
+                    <h:commandLink action="avalizacao.xhtml">    
+                        <div class="bloco">
+                            <img src="images/misc/universalaccess.png" class="bloco_img"/>
+                            <h3>LEITO 05</h3> 
+                        </div>    
+                    </h:commandLink>
+
+                    <h:commandLink action="avalizacao.xhtml">    
+                        <div class="bloco">
+                            <img src="images/misc/universalaccess.png" class="bloco_img"/>
+                            <h3>LEITO 06</h3> 
+                        </div>    
+                    </h:commandLink>
+
+                    <h:commandLink action="avalizacao.xhtml">    
+                        <div class="bloco">
+                            <img src="images/misc/universalaccess.png" class="bloco_img"/>
+                            <h3>LEITO 07</h3> 
+                        </div>    
+                    </h:commandLink>
+
+                    <h:commandLink action="avalizacao.xhtml">    
+                        <div class="bloco">
+                            <img src="images/misc/universalaccess.png" class="bloco_img"/>
+                            <h3>LEITO 08</h3> 
+                        </div>    
+                    </h:commandLink>
+
+                    <h:commandLink action="avalizacao.xhtml">    
+                        <div class="bloco">
+                            <img src="images/misc/universalaccess.png" class="bloco_img"/>
+                            <h3>LEITO 09</h3> 
+                        </div>    
+                    </h:commandLink>
+
+                    <h:commandLink action="avalizacao.xhtml">    
+                        <div class="bloco">
+                            <img src="images/misc/universalaccess.png" class="bloco_img"/>
+                            <h3>LEITO 10</h3> 
+                        </div>    
+                    </h:commandLink>
+                </h:form>
+            </div>  
+            <div class="one-half-responsive hide-if-responsive">
+                <h:form>
+                    <h:commandLink action="avaliacao.xhtml">    
+                        <div class="bloco_mobile">
+                            <img src="images/misc/universalaccess.png" class="bloco_mobile_img"/>
+                            <h3>LEITO 01</h3> 
+                        </div>    
+                    </h:commandLink>
+
+                    <h:commandLink action="avalizacao.xhtml">    
+                        <div class="bloco_mobile">
+                            <img src="images/misc/universalaccess.png" class="bloco_mobile_img"/>
+                            <h3>LEITO 02</h3> 
+                        </div>    
+                    </h:commandLink>
+
+                    <h:commandLink action="avalizacao.xhtml">    
+                        <div class="bloco_mobile">
+                            <img src="images/misc/universalaccess.png" class="bloco_mobile_img"/>
+                            <h3>LEITO 03</h3> 
+                        </div>    
+                    </h:commandLink>
+
+                    <h:commandLink action="avalizacao.xhtml">    
+                        <div class="bloco_mobile">
+                            <img src="images/misc/universalaccess.png" class="bloco_mobile_img"/>
+                            <h3>LEITO 04</h3> 
+                        </div>    
+                    </h:commandLink>
+
+                    <h:commandLink action="avalizacao.xhtml">    
+                        <div class="bloco_mobile">
+                            <img src="images/misc/universalaccess.png" class="bloco_mobile_img"/>
+                            <h3>LEITO 05</h3> 
+                        </div>    
+                    </h:commandLink>
+
+                    <h:commandLink action="avalizacao.xhtml">    
+                        <div class="bloco_mobile">
+                            <img src="images/misc/universalaccess.png" class="bloco_mobile_img"/>
+                            <h3>LEITO 06</h3> 
+                        </div>    
+                    </h:commandLink>
+
+                    <h:commandLink action="avalizacao.xhtml">    
+                        <div class="bloco_mobile">
+                            <img src="images/misc/universalaccess.png" class="bloco_mobile_img"/>
+                            <h3>LEITO 07</h3> 
+                        </div>    
+                    </h:commandLink>
+
+                    <h:commandLink action="avalizacao.xhtml">    
+                        <div class="bloco_mobile">
+                            <img src="images/misc/universalaccess.png" class="bloco_mobile_img"/>
+                            <h3>LEITO 08</h3> 
+                        </div>    
+                    </h:commandLink>
+
+                    <h:commandLink action="avalizacao.xhtml">    
+                        <div class="bloco_mobile">
+                            <img src="images/misc/universalaccess.png" class="bloco_mobile_img"/>
+                            <h3>LEITO 09</h3> 
+                        </div>    
+                    </h:commandLink>
+
+                    <h:commandLink action="avalizacao.xhtml">    
+                        <div class="bloco_mobile">
+                            <img src="images/misc/universalaccess.png" class="bloco_mobile_img"/>
+                            <h3>LEITO 10</h3> 
+                        </div>    
+                    </h:commandLink>
+                </h:form>
+            </div>  
+        </div>
+    </body>
+</html>
