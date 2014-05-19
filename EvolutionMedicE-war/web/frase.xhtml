@@ -40,27 +40,24 @@
         <script type="text/javascript" src="scripts/framework.launcher.js"></script>
     </head>
     <body>
-         <div id="preloader">
-            <div id="status">
-            </div>
-        </div>
+
         <div class="all-elements">
             <div id="sidebar" class="page-sidebar">
                 <div class="page-sidebar-scroll">
-<!--                    <div class="sidebar-shortcuts">
-                        <a href="https://google.com" class="shortcut-search"></a>
-                        <a href="#" class="shortcut-close"></a>
-                    </div>-->
+                    <!--                    <div class="sidebar-shortcuts">
+                                            <a href="https://google.com" class="shortcut-search"></a>
+                                            <a href="#" class="shortcut-close"></a>
+                                        </div>-->
                     <div class="sidebar-search">
                     </div>
                     <div class="sidebar-logo">
                         <img src="images/misc/logo-evolutionMedic.png" height="90" alt="img"/>
                     </div>
 
-<!--                    <div class="sidebar-decoration"></div>    
-                    <div class="navigation-item">
-                        <a href="index.xhtml" class="nav-item home-icon">Início<em class="unselected-item"></em></a>
-                    </div>    -->
+                    <!--                    <div class="sidebar-decoration"></div>    
+                                        <div class="navigation-item">
+                                            <a href="index.xhtml" class="nav-item home-icon">Início<em class="unselected-item"></em></a>
+                                        </div>    -->
                     <div class="sidebar-breadcrumb">ACOMODAÇÕES</div>
                     <div class="navigation-item">
                         <a href="index.xhtml" class="nav-item leito-icon">Leitos</a>
@@ -116,6 +113,7 @@
                     <div class="one-half-responsive">
                         <p style="text-align:center">Cadastro de Frases</p>
                         <h:form id="bloco_frase">                                     
+                            <p:growl/>
                             <h:inputHidden  value="#{fraseMB.frase.idFrase}" />
                             <p:inputText type="text"
                                          value="#{fraseMB.frase.descricao}"
@@ -131,7 +129,7 @@
                         </h:form>
                     </div>
                 </div>
-  
+
                 <div class="container">
                     <h:form>
                         <p:dataTable var="frase"

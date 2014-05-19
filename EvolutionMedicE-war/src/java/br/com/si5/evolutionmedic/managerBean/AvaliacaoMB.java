@@ -138,7 +138,7 @@ public class AvaliacaoMB {
 
     public void editar() {
         Integer id = Integer.valueOf(getSessionParam("idAvaliacao"));
-        if (id != null && id != 0) {
+        if (id != 0) {
             avaliacao = selecionaPorID(id);
             setSessionParamIdAvaliacao(0);
         }

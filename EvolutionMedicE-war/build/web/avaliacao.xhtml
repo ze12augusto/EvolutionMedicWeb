@@ -41,10 +41,6 @@
         <script type="text/javascript" src="scripts/framework.launcher.js"></script>
     </head>
     <body>
-        <div id="preloader">
-            <div id="status">
-            </div>
-        </div>
         <div class="all-elements">
             <div id="sidebar" class="page-sidebar">
                 <div class="page-sidebar-scroll">
@@ -143,12 +139,12 @@
 
                             <p:column headerText="Editar">
 
-                                    <h:commandLink value="Editar"
-                                                   styleClass="btn btn-blue"
-                                                   action="formulario.xhtml">
-                                        <f:actionListener binding="#{avaliacaoMB.setSessionParamIdAvaliacao(avaliacao.idAvaliacao)}" />
+                                <h:commandLink value="Editar"
+                                               styleClass="btn btn-blue"
+                                               action="formulario.xhtml">
+                                    <f:actionListener binding="#{avaliacaoMB.setSessionParamIdAvaliacao(avaliacao.idAvaliacao)}" />
 
-                                    </h:commandLink>
+                                </h:commandLink>
                             </p:column>
 
                             <p:column headerText="Excluir">
@@ -160,12 +156,18 @@
 
                         </p:dataTable>
                         <div class="one-half-responsive">   
-                            <p:commandButton 
+                            <h:commandLink 
                                 action="formulario.xhtml"
                                 id="contactSubmitButton" 
                                 value="Nova Avaliação" 
-                                styleClass="buttonWrap button button-blue contactSubmitButton"
-                                />
+                                styleClass="buttonWrap button button-blue contactSubmitButton">
+
+                                <f:actionListener binding="#{avaliacaoMB.setSessionParamIdAvaliacao(0)}" />
+
+
+                            </h:commandLink>
+
+
                         </div>
                     </h:form>
                 </div>
