@@ -123,19 +123,16 @@
 
                 <div class="one-half-responsive">
                     <p style="text-align:center">Dados Paciente</p>
-
+                    #{avaliacaoMB.editar()}
                     
+                    <h:inputHidden value="#{avaliacaoMB.avaliacao.idAvaliacao}"/>
                         <p:panelGrid columns="2">
                             <h:outputLabel for="nome" value="Nome:" />  
                             <p:inputText id="nomePaciente"
                                          value="#{avaliacaoMB.avaliacao.nomePaciente}"
                                          styleClass="contactField"
                                          label="nome" />  
-                            <h:outputLabel for="leito" value="Leito:" />  
-                            <p:inputText id="leito"
-                                         value="#{avaliacaoMB.leitoEscolhido}"
-                                         styleClass="contactField"
-                                         label="leito" />  
+                            
 
                             <h:outputLabel for="medico" value="Médico:" />  
                             <p:inputText id="nomeMedico"

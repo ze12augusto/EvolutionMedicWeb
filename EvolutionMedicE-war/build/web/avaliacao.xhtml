@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:p="http://primefaces.org/ui">
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <head>
         <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0"/>
         <meta name="apple-mobile-web-app-capable" content="yes"/>
@@ -40,17 +41,17 @@
         <script type="text/javascript" src="scripts/framework.launcher.js"></script>
     </head>
     <body>
-         <div id="preloader">
+        <div id="preloader">
             <div id="status">
             </div>
         </div>
         <div class="all-elements">
             <div id="sidebar" class="page-sidebar">
                 <div class="page-sidebar-scroll">
-<!--                    <div class="sidebar-shortcuts">
-                        <a href="https://google.com" class="shortcut-search"></a>
-                        <a href="#" class="shortcut-close"></a>
-                    </div>-->
+                    <!--                    <div class="sidebar-shortcuts">
+                                            <a href="https://google.com" class="shortcut-search"></a>
+                                            <a href="#" class="shortcut-close"></a>
+                                        </div>-->
                     <div class="sidebar-search">
                         <div class="search-box">
                             <input type="text" class="search-field" name="search" onfocus="if (this.value == 'Looking for something?') {
@@ -63,10 +64,10 @@
                         <img src="images/misc/logo-evolutionMedic.png" height="90" alt="img"/>
                     </div>
 
-<!--                    <div class="sidebar-decoration"></div>    
-                    <div class="navigation-item">
-                        <a href="index.xhtml" class="nav-item home-icon">Início<em class="unselected-item"></em></a>
-                    </div>    -->
+                    <!--                    <div class="sidebar-decoration"></div>    
+                                        <div class="navigation-item">
+                                            <a href="index.xhtml" class="nav-item home-icon">Início<em class="unselected-item"></em></a>
+                                        </div>    -->
                     <div class="sidebar-breadcrumb">ACOMODAÇÕES</div>
                     <div class="navigation-item">
                         <a href="index.xhtml" class="nav-item leito-icon">Leitos</a>
@@ -122,29 +123,32 @@
                 </div>
             </div>
             <div class="page-header-clear"></div>
-             <div class="decoration hide-if-responsive"></div>
-            
+            <div class="decoration hide-if-responsive"></div>
+
             <div class="content">
-               
+
                 <div class="container no-bottom">
                     <h:form>
                         <p:dataTable var="avaliacao"
                                      emptyMessage="Nenhuma Avaliação Cadastrada"
-                                     value="#{avaliacaoMB.carregaLista()}">
+                                     value="#{avaliacaoMB.carregaListaPorLeito()}">
 
                             <p:column headerText="Data">
                                 <h:outputText value="#{avaliacao.dataAvaliacao}" />
                             </p:column>
-                            
+
                             <p:column headerText="Nome Paciente">
                                 <h:outputText value="#{avaliacao.nomePaciente}" />
                             </p:column>
 
                             <p:column headerText="Editar">
-                                <p:commandButton value="Editar"
 
-                                                 styleClass="btn btn-blue"
-                                                 actionListener="#{avaliacaoMB.editar(avaliacao.idAvaliacao)}" />
+                                    <h:commandLink value="Editar"
+                                                   styleClass="btn btn-blue"
+                                                   action="formulario.xhtml">
+                                        <f:actionListener binding="#{avaliacaoMB.setSessionParamIdAvaliacao(avaliacao.idAvaliacao)}" />
+
+                                    </h:commandLink>
                             </p:column>
 
                             <p:column headerText="Excluir">

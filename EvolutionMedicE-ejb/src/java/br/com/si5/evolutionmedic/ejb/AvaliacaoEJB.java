@@ -52,4 +52,12 @@ public class AvaliacaoEJB {
         return query.getResultList();
     }
 
+    public List<Avaliacao> listarPorLeito(String leito) {
+        
+        TypedQuery<Avaliacao> query = em.createQuery("select a From Avaliacao a "
+                + "where a.leito.descricaoLeito =:leito",
+                Avaliacao.class).setParameter("leito", leito);
+        return query.getResultList();
+    }
+    
 }

@@ -1,11 +1,12 @@
 package br.com.si5.evolutionmedic.managerBean;
 
 import br.com.si5.evolutionmedic.ejb.AvaliacaoEJB;
-import br.com.si5.evolutionmedic.ejb.LeitoEJB;
 import br.com.si5.evolutionmedic.ejb.FraseEJB;
+import br.com.si5.evolutionmedic.ejb.LeitoEJB;
 import br.com.si5.evolutionmedic.entidades.Avaliacao;
 import br.com.si5.evolutionmedic.entidades.Frase;
 import br.com.si5.evolutionmedic.entidades.Leito;
+import br.com.si5.evolutionmedic.session.SessionUtil;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -34,13 +35,11 @@ public class AvaliacaoMB {
     private LeitoEJB leitoEjb;
     private String descricao;
     private List<Avaliacao> avaliacoes;
-    private String leitoEscolhido;
 
     public AvaliacaoMB() {
         avaliacao = new Avaliacao();
         frases = new ArrayList<>();
         avaliacoes = new ArrayList<>();
-        leitoEscolhido = "";
     }
 
     public Avaliacao getAvaliacao() {
@@ -55,45 +54,35 @@ public class AvaliacaoMB {
         this.frases = frases;
     }
 
-    public String getLeitoEscolhido() {
-        return leitoEscolhido;
-    }
+    public void recuperarLeito(String leitoEscolhido) {
 
-    public void setLeitoEscolhido(String leitoEscolhido) {
-        this.leitoEscolhido = leitoEscolhido;
-    }
-    
-    public void recuperarLeito(String leitoEscolhido){
-    
         leito = leitoEjb.selecionaPorDescricao(leitoEscolhido);
     }
-    
-    public void adicionarFrase(){
-    
+
+    public void adicionarFrase() {
+
+    }
+
+    public void salvar() {
+        recuperarLeito(getSessionParam("leito"));
         Frase frase = fraseEjb.selecionaPorDescricao(descricao);
         frases.add(frase);
-    }
-    
-    public void salvar() {
-        
-        recuperarLeito(leitoEscolhido);
         avaliacao.setDataAvaliacao(new Date());
         avaliacao.setFraseList(frases);
-        avaliacao.setIdAvaliacao(Integer.MAX_VALUE);
         avaliacao.setLeito(leito);
         avaliacoes.add(avaliacao);
         leito.setAvaliacaoList(avaliacoes);
         String erro = leitoEjb.salvar(leito);
 
-       if (erro == null) {
+        if (erro == null) {
             FacesMessage fm
                     = new FacesMessage(FacesMessage.SEVERITY_INFO,
-                    "Avaliação salva com sucesso", null);
+                            "Avaliação salva com sucesso", null);
             FacesContext.getCurrentInstance().addMessage(null, fm);
         } else {
             FacesMessage fm
                     = new FacesMessage(FacesMessage.SEVERITY_ERROR,
-                    erro, null);
+                            erro, null);
             FacesContext.getCurrentInstance().addMessage(null, fm);
         }
         avaliacao = new Avaliacao();
@@ -105,11 +94,20 @@ public class AvaliacaoMB {
         return avaliacaoEJB.listaTodos();
     }
 
-    public List<Frase> carregaListaFrase(){
-    
+    public List<Avaliacao> carregaListaPorLeito() {
+        return avaliacaoEJB.listarPorLeito(getSessionParam("leito"));
+    }
+
+    public String getSessionParam(String nome) {
+
+        return SessionUtil.getParam(nome).toString();
+    }
+
+    public List<Frase> carregaListaFrase() {
+
         return frases;
     }
-    
+
     public Avaliacao selecionaPorID(Integer id) {
         return avaliacao = avaliacaoEJB.selecionaPorID(id);
     }
@@ -121,7 +119,7 @@ public class AvaliacaoMB {
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
-    
+
     public void excluir(Integer id) {
         String erro = avaliacaoEJB.excluir(id);
         if (erro == null) {
@@ -133,8 +131,21 @@ public class AvaliacaoMB {
         }
     }
 
-    public void editar(Integer id){
-    
-        avaliacao = selecionaPorID(id);
+    public void setSessionParamLeito(String valor) {
+
+        SessionUtil.setParam("leito", valor);
+    }
+
+    public void editar() {
+        Integer id = Integer.valueOf(getSessionParam("idAvaliacao"));
+        if (id != null && id != 0) {
+            avaliacao = selecionaPorID(id);
+            setSessionParamIdAvaliacao(0);
+        }
+    }
+
+    public void setSessionParamIdAvaliacao(Integer id) {
+
+        SessionUtil.setParam("idAvaliacao", id);
     }
 }
