@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html">
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <head>
         <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0"/>
         <meta name="apple-mobile-web-app-capable" content="yes"/>
@@ -121,62 +122,70 @@
             <div class="decoration"></div> 
             <div class="one-half-web hide-if-mobile">
                 <h:form>
-                    <h:commandLink action="avalizacao.xhtml">    
+                    <h:commandLink action="avaliacao.xhtml">    
                         <div class="bloco">
                             <img src="images/misc/universalaccess.png" class="bloco_img"/>
                             <h3>EXTRA 01</h3> 
+                            <f:actionListener binding="#{avaliacaoMB.setSessionParamLeito('Extra_1')}"/>
                         </div>    
                     </h:commandLink>
 
-                    <h:commandLink action="avalizacao.xhtml">    
+                    <h:commandLink action="avaliacao.xhtml">    
                         <div class="bloco">
                             <img src="images/misc/universalaccess.png" class="bloco_img"/>
                             <h3>EXTRA 02</h3> 
+                            <f:actionListener binding="#{avaliacaoMB.setSessionParamLeito('Extra_2')}"/>
                         </div>    
                     </h:commandLink>
 
-                    <h:commandLink action="avalizacao.xhtml">    
+                    <h:commandLink action="avaliacao.xhtml">    
                         <div class="bloco">
                             <img src="images/misc/universalaccess.png" class="bloco_img"/>
                             <h3>EXTRA 03</h3> 
+                            <f:actionListener binding="#{avaliacaoMB.setSessionParamLeito('Extra_3')}"/>
                         </div>    
                     </h:commandLink>
 
-                    <h:commandLink action="avalizacao.xhtml">    
+                    <h:commandLink action="avaliacao.xhtml">    
                         <div class="bloco">
                             <img src="images/misc/universalaccess.png" class="bloco_img"/>
                             <h3>EXTRA 04</h3> 
+                            <f:actionListener binding="#{avaliacaoMB.setSessionParamLeito('Extra_4')}"/>
                         </div>    
                     </h:commandLink>
                 </h:form>
             </div>  
             <div class="one-half hide-if-responsive">
                 <h:form>
-                    <h:commandLink action="avalizacao.xhtml">    
+                    <h:commandLink action="avaliacao.xhtml">    
                         <div class="bloco_mobile">
                             <img src="images/misc/universalaccess.png" class="bloco_mobile_img"/>
                             <h3>EXTRA 01</h3> 
+                            <f:actionListener binding="#{avaliacaoMB.setSessionParamLeito('Extra_1')}"/>
                         </div>    
                     </h:commandLink>
 
-                    <h:commandLink action="avalizacao.xhtml">    
+                    <h:commandLink action="avaliacao.xhtml">    
                         <div class="bloco_mobile">
                             <img src="images/misc/universalaccess.png" class="bloco_mobile_img"/>
                             <h3>EXTRA 02</h3> 
+                            <f:actionListener binding="#{avaliacaoMB.setSessionParamLeito('Extra_2')}"/>
                         </div>    
                     </h:commandLink>
 
-                    <h:commandLink action="avalizacao.xhtml">    
+                    <h:commandLink action="avaliacao.xhtml">    
                         <div class="bloco_mobile">
                             <img src="images/misc/universalaccess.png" class="bloco_mobile_img"/>
                             <h3>EXTRA 03</h3> 
+                            <f:actionListener binding="#{avaliacaoMB.setSessionParamLeito('Extra_3')}"/>
                         </div>    
                     </h:commandLink>
 
-                    <h:commandLink action="avalizacao.xhtml">    
+                    <h:commandLink action="avaliacao.xhtml">    
                         <div class="bloco_mobile">
                             <img src="images/misc/universalaccess.png" class="bloco_mobile_img"/>
                             <h3>EXTRA 04</h3> 
+                            <f:actionListener binding="#{avaliacaoMB.setSessionParamLeito('Extra_4')}"/>
                         </div>    
                     </h:commandLink>
                 </h:form>

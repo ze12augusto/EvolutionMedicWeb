@@ -121,9 +121,8 @@
                 <div class="one-half-responsive">
                     <p style="text-align:center">Dados Paciente</p>
                     #{avaliacaoMB.editar()}
-                    
                     <h:inputHidden value="#{avaliacaoMB.avaliacao.idAvaliacao}"/>
-                        <p:panelGrid columns="2">
+                    
                             <h:outputLabel for="nome" value="Nome:" />  
                             <p:inputText id="nomePaciente"
                                          value="#{avaliacaoMB.avaliacao.nomePaciente}"
@@ -137,9 +136,9 @@
                                          styleClass="contactField"
                                          label="medico" />  
 
-                        </p:panelGrid>
                         
-                    <h:form id="fraseAvaliacao">
+                        <p style="text-align:center">Dados Avaliação</p> 
+
                     <p:autoComplete id="acSimple"
                                         completeMethod="#{fraseMB.carregaListaAutoComplete}"
                                         value="#{avaliacaoMB.descricao}"/>
@@ -148,20 +147,26 @@
                                          id="adicionar" 
                                          value="Adicionar Frase" 
                                          styleClass="buttonWrap button button-blue contactSubmitButton"
-                                         update="fraseAvaliacao"/>
+                                         update="tb_frases" />
                                      
-                     </h:form>
+
 
                     
                 </div>
                 <div class="decoration hide-if-responsive" style="margin-top: 20px"></div>
 
                 <div id="tabela" class="one-half-responsive-avalia last-column" style="margin-top: 21px">
-                        <p:dataTable var="frase" 
+                        <p:dataTable id="tb_frases" var="frase" 
                                      value="#{avaliacaoMB.carregaListaFrase()}" 
                                      emptyMessage="Nenhuma frase encontrada">
                             <p:column headerText="Frases">
                                 <h:outputText value="#{frase.descricao}" />
+                            </p:column>
+                            <p:column headerText="Excluir">
+                                <p:commandButton value="Excluir"
+
+                                                 styleClass="btn btn-red"
+                                                 actionListener="#{avaliacaoMB.excluirFrase(frase.idFrase)}" update="tb_frases"/>
                             </p:column>
                         </p:dataTable>
                     <p:commandButton actionListener="#{avaliacaoMB.salvar()}" 
