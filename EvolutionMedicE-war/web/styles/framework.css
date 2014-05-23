@@ -495,7 +495,7 @@ a:hover{
 .button{
     text-align:center;
     color:#FFFFFF;
-    padding:8px 13px;
+    padding:4px 13px;
     display:inline-block;	
     margin-bottom:2px;
     margin-left:2px;
@@ -1665,6 +1665,7 @@ table tr:hover td{
     display:block!important;
     height:36px!important;
     margin-right:4px;
+    margin-top: 2px;
     width:30%;
     border-radius: 5px 5px 5px 5px;
 }
@@ -1703,7 +1704,7 @@ table tr:hover td{
     opacity:0.2;
 }
 
-span{font-family: sans-serif !Important;}
+span{font-family: sans-serif !Important;padding-top: -7px;}
 
 /*Field Styles*/
 #contactNameField{
@@ -1724,7 +1725,8 @@ span{font-family: sans-serif !Important;}
 
 .buttonWrap{
     line-height:20px;
-    padding-bottom:24px;
+    padding-bottom: 23px;
+    padding-top: 8px;
     min-width:44%;
     display:inline-block;
 }
