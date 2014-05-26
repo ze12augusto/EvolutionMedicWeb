@@ -23,7 +23,7 @@ body {
     background-image:url(../images/misc/bg.png);
     z-index:10;
     display:block;
-    min-height:635px;		
+    min-height: 643px;		
 }
 
 .page-content-wrapper{
@@ -1042,4 +1042,28 @@ h3{height: 30px;
 .btn-cadfrase{ width: 16px;
                background-image:url(../images/excluir.png); 
 
+}
+.ui-button .ui-button-text {
+display: block;
+/* line-height: 0.6 !important; */
+
+
+}
+
+.ui-inputfield, .ui-widget-content .ui-inputfield, .ui-widget-header .ui-inputfield {
+background: #ffffff;
+-moz-box-shadow: inset 0 2px 2px #8f8f8f;
+-webkit-box-shadow: inset 0 2px 2px #fff;
+box-shadow: inset 0 2px 2px #FFF !important;
+color: #313131;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+/* border: 1px solid #E1D4D4; */ 
+background: #c4c4c4 linear-gradient(top, rgba(255,255,255,0.8), rgba(255,255,255,0));
+/*background: #c4c4c4 -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.8)), to(rgba(255,255,255,0))) !important; 
+background: #c4c4c4 -moz-linear-gradient(top, rgba(255,255,255,0.8), rgba(255,255,255,0));
+/* font-weight: bold; */
+/* color: #fff; */
+/* text-shadow: 0px 1px 0px rgba(255,255,255,0.7); */
 }
