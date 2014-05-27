@@ -44,7 +44,7 @@
         <div class="all-elements">
             <div id="sidebar" class="page-sidebar">
                 <div class="page-sidebar-scroll">
-                    
+
                     <div class="sidebar-search">
                         <div class="search-box">
                             <input type="text" class="search-field" name="search" onfocus="if (this.value == 'Looking for something?') {
@@ -77,16 +77,12 @@
                     </div>
                     <div class="sidebar-decoration"></div>
                     <div class="navigation-item">
-                        <a href="#" class="nav-item impress-icon">Visualizar</a>
-                    </div>
-                    <div class="sidebar-decoration"></div>
-                    <div class="navigation-item">
                         <a href="www.sair.com" class="nav-item sair-icon hide-if-responsive">Sair</a>
                     </div>
                     <div class="sidebar-decoration"></div>
                 </div>         
             </div>
-         
+
         </div>
         <div id="content" class="page-content"> 
 
@@ -103,8 +99,7 @@
                         <li class='last'><a href='index.xhtml'><span>Leitos</span></a></li>
                         <li class='last'><a href='extra.xhtml'><span>Extra</span></a></li>
                         <li class='last'><a href='isolado.xhtml'><span>Isolado</span></a></li>
-                        <li class='last'><a href='frase.xhtml'><span>Cadastro Frase</span></a></li>
-                        
+                        <li class='last'><a href='frase.xhtml'><span>Cadastro Frase</span></a></li> 
                     </ul>
                 </div>
             </div>
@@ -143,10 +138,13 @@
                                                  styleClass="btn btn-red"
                                                  actionListener="#{avaliacaoMB.excluir(avaliacao.idAvaliacao)}" />
                             </p:column>
-                            
-                             <p:column headerText="imprimir">
+
+                            <p:column headerText="imprimir">
                                 <p:commandButton value="Imprimir"
-                                                 styleClass="btn btn-dark" ajax="false" process="@this"  action="#{avaliacaoMB.imprimeAvaliacao(avaliacao.idAvaliacao)}" />
+                                                 styleClass="btn btn-dark"
+                                                 ajax="false"
+                                                 process="@this" 
+                                                 action="#{avaliacaoMB.imprimeAvaliacao(avaliacao.idAvaliacao)}" />
                             </p:column>
 
                         </p:dataTable>

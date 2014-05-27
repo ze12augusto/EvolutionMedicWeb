@@ -42,97 +42,92 @@
     <h:body>
         <h:form class="bloco_frase" id="bloco_frase">
             <p:growl/>
-        
-        <div class="all-elements">
-            <div id="sidebar" class="page-sidebar">
-                <div class="page-sidebar-scroll">
-                    <div class="sidebar-shortcuts">
-                       
-                    </div>
-                    <div class="sidebar-search">
-                        <div class="search-box">
-                           
-                        </div>
-                    </div>
-                    <div class="sidebar-logo">
-                        <img src="images/misc/logo-evolutionMedic.png" height="90" alt="img"/>
-                    </div>
-                    <div class="sidebar-breadcrumb">ACOMODAÇÕES</div>
-                    <div class="navigation-item">
-                        <a href="index.xhtml" class="nav-item leito-icon">Leitos</a>
-                    </div>  
 
-                    <div class="sidebar-decoration"></div>
-                    <div class="navigation-item">
-                        <a href="extra.xhtml" class="nav-item leito-icon">Extra</a>
-                    </div> 
+            <div class="all-elements">
+                <div id="sidebar" class="page-sidebar">
+                    <div class="page-sidebar-scroll">
+                        <div class="sidebar-shortcuts">
 
-                    <div class="sidebar-decoration"></div>
-                    <div class="navigation-item">
-                        <a href="isolado.xhtml" class="nav-item leito-icon">Isolado</a>
-                    </div>
-                    <div class="sidebar-breadcrumb">CONFIGURAÇÃO</div>
-                    <div class="navigation-item">
-                        <a href="frase.xhtml" class="nav-item frase-icon">Cadastrar Frase</a>
-                    </div>
-                    <div class="sidebar-decoration"></div>
-                    <div class="navigation-item">
-                        <a href="#" class="nav-item impress-icon">Imprimir Relatório</a>
-                    </div>
-                    <div class="sidebar-decoration"></div>
-                    <div class="navigation-item">
-                        <a href="www.sair.com" class="nav-item sair-icon hide-if-responsive">Sair</a>
-                    </div>
-                    <div class="sidebar-decoration"></div>
-                </div>         
-            </div>
-           
-        </div>
-        <div id="content" class="page-content"> 
-            <div class="page-header hide-if-responsive" style="margin-bottom: 20px;">
-                <a href="#" class="deploy-sidebar"></a>
-                <img class="header-logo" src="images/misc/logo-evolution.png" width="71" alt="img"/>
-            </div>
-            <div class="page-header hide-if-mobile" style="margin-bottom: 20px;">
-                <div id="cssmenu">
-                    <ul>
-                        <div class="logo">
-                            <a href='index.xhtml'><img src="images/misc/logo-evolution.png" width="95" alt="img"/></a>
                         </div>
-                        <li class='last'><a href='index.xhtml'><span>Leitos</span></a></li>
-                        <li class='last'><a href='extra.xhtml'><span>Extra</span></a></li>
-                        <li class='last'><a href='isolado.xhtml'><span>Isolado</span></a></li>
-                        <li class='last'><a href='frase.xhtml'><span>Cadastro Frase</span></a></li>
-                       
-                    </ul>
+                        <div class="sidebar-search">
+                            <div class="search-box">
+
+                            </div>
+                        </div>
+                        <div class="sidebar-logo">
+                            <img src="images/misc/logo-evolutionMedic.png" height="90" alt="img"/>
+                        </div>
+                        <div class="sidebar-breadcrumb">ACOMODAÇÕES</div>
+                        <div class="navigation-item">
+                            <a href="index.xhtml" class="nav-item leito-icon">Leitos</a>
+                        </div>  
+
+                        <div class="sidebar-decoration"></div>
+                        <div class="navigation-item">
+                            <a href="extra.xhtml" class="nav-item leito-icon">Extra</a>
+                        </div> 
+
+                        <div class="sidebar-decoration"></div>
+                        <div class="navigation-item">
+                            <a href="isolado.xhtml" class="nav-item leito-icon">Isolado</a>
+                        </div>
+                        <div class="sidebar-breadcrumb">CONFIGURAÇÃO</div>
+                        <div class="navigation-item">
+                            <a href="frase.xhtml" class="nav-item frase-icon">Cadastrar Frase</a>
+                        </div>
+                        <div class="sidebar-decoration"></div>
+                        <div class="navigation-item">
+                            <a href="www.sair.com" class="nav-item sair-icon hide-if-responsive">Sair</a>
+                        </div>
+                        <div class="sidebar-decoration"></div>
+                    </div>         
                 </div>
+
             </div>
+            <div id="content" class="page-content"> 
+                <div class="page-header hide-if-responsive" style="margin-bottom: 20px;">
+                    <a href="#" class="deploy-sidebar"></a>
+                    <img class="header-logo" src="images/misc/logo-evolution.png" width="71" alt="img"/>
+                </div>
+                <div class="page-header hide-if-mobile" style="margin-bottom: 20px;">
+                    <div id="cssmenu">
+                        <ul>
+                            <div class="logo">
+                                <a href='index.xhtml'><img src="images/misc/logo-evolution.png" width="95" alt="img"/></a>
+                            </div>
+                            <li class='last'><a href='index.xhtml'><span>Leitos</span></a></li>
+                            <li class='last'><a href='extra.xhtml'><span>Extra</span></a></li>
+                            <li class='last'><a href='isolado.xhtml'><span>Isolado</span></a></li>
+                            <li class='last'><a href='frase.xhtml'><span>Cadastro Frase</span></a></li>
+                        </ul>
+                    </div>
+                </div>
 
-            <div class="decoration hide-if-responsive"></div>
-            <div class="content">
+                <div class="decoration hide-if-responsive"></div>
+                <div class="content">
 
-                <div class="one-half-responsive">
-                    <p style="text-align:center">Dados Paciente</p>
-                    #{avaliacaoMB.editar()}
-                    <h:inputHidden value="#{avaliacaoMB.avaliacao.idAvaliacao}"/>
-                    
-                            <h:outputLabel for="nome" value="Nome:" />  
-                            <p:inputText id="nomePaciente"
-                                         value="#{avaliacaoMB.avaliacao.nomePaciente}"
-                                         styleClass="contactField"
-                                         label="nome" />  
-                            
+                    <div class="one-half-responsive">
+                        <p style="text-align:center">Dados Paciente</p>
+                        #{avaliacaoMB.editar()}
+                        <h:inputHidden value="#{avaliacaoMB.avaliacao.idAvaliacao}"/>
 
-                            <h:outputLabel for="medico" value="Médico:" />  
-                            <p:inputText id="nomeMedico"
-                                         value="#{avaliacaoMB.avaliacao.nomeMedico}"
-                                         styleClass="contactField"
-                                         label="medico" />  
+                        <h:outputLabel for="nome" value="Nome:" />  
+                        <p:inputText id="nomePaciente"
+                                     value="#{avaliacaoMB.avaliacao.nomePaciente}"
+                                     styleClass="contactField"
+                                     label="nome" />  
 
-                        
+
+                        <h:outputLabel for="medico" value="Médico:" />  
+                        <p:inputText id="nomeMedico"
+                                     value="#{avaliacaoMB.avaliacao.nomeMedico}"
+                                     styleClass="contactField"
+                                     label="medico" />  
+
+
                         <p style="text-align:center">Dados Avaliação</p> 
 
-                    <p:autoComplete id="acSimple"
+                        <p:autoComplete id="acSimple"
                                         completeMethod="#{fraseMB.carregaListaAutoComplete}"
                                         value="#{avaliacaoMB.descricao}"/>
 
@@ -141,14 +136,11 @@
                                          value="Adicionar Frase" 
                                          styleClass="buttonWrap button button-blue contactSubmitButton"
                                          update="tb_frases" />
-                                     
 
+                    </div>
+                    <div class="decoration hide-if-responsive" style="margin-top: 20px"></div>
 
-                    
-                </div>
-                <div class="decoration hide-if-responsive" style="margin-top: 20px"></div>
-
-                <div id="tabela" class="one-half-responsive-avalia last-column" style="margin-top: 21px">
+                    <div id="tabela" class="one-half-responsive-avalia last-column" style="margin-top: 21px">
                         <p:dataTable id="tb_frases" var="frase" 
                                      value="#{avaliacaoMB.carregaListaFrase()}" 
                                      emptyMessage="Nenhuma frase encontrada">
@@ -162,15 +154,15 @@
                                                  actionListener="#{avaliacaoMB.excluirFrase(frase.idFrase)}" update="tb_frases"/>
                             </p:column>
                         </p:dataTable>
-                    <p:commandButton actionListener="#{avaliacaoMB.salvar()}" 
-                                     id="Salvar" 
-                                     value="Salvar Avaliação" 
-                                     styleClass="buttonWrap button button-blue contactSubmitButton"
-                                     update="bloco_frase"/>
+                        <p:commandButton actionListener="#{avaliacaoMB.salvar()}" 
+                                         id="Salvar" 
+                                         value="Salvar Avaliação" 
+                                         styleClass="buttonWrap button button-blue contactSubmitButton"
+                                         update="bloco_frase"/>
+                    </div>
+                    <div class="clear"></div>   
                 </div>
-                <div class="clear"></div>   
-            </div>
-        </div>       
+            </div>       
         </h:form>
     </h:body>
 </html>

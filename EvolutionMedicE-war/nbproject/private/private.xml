@@ -5,7 +5,11 @@
         <group>
             <file>file:/D:/HELENO-UNIPAM/PI/EvolutionMedicWeb/EvolutionMedicE-war/web/avaliacao.xhtml</file>
             <file>file:/D:/HELENO-UNIPAM/PI/EvolutionMedicWeb/EvolutionMedicE-war/web/formulario.xhtml</file>
-            <file>file:/D:/HELENO-UNIPAM/PI/EvolutionMedicWeb/EvolutionMedicE-war/src/java/br/com/si5/evolutionmedic/managerBean/AvaliacaoMB.java</file>
+            <file>file:/D:/HELENO-UNIPAM/PI/EvolutionMedicWeb/EvolutionMedicE-war/web/extra.xhtml</file>
+            <file>file:/D:/HELENO-UNIPAM/PI/EvolutionMedicWeb/EvolutionMedicE-war/web/isolado.xhtml</file>
+            <file>file:/D:/HELENO-UNIPAM/PI/EvolutionMedicWeb/EvolutionMedicE-war/web/styles/style.css</file>
+            <file>file:/D:/HELENO-UNIPAM/PI/EvolutionMedicWeb/EvolutionMedicE-war/web/index.xhtml</file>
+            <file>file:/D:/HELENO-UNIPAM/PI/EvolutionMedicWeb/EvolutionMedicE-war/web/frase.xhtml</file>
         </group>
     </open-files>
 </project-private>
