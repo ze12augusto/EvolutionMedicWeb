@@ -1,5 +1,6 @@
 package br.com.si5.evolutionmedic.managerBean;
 
+import br.com.si5.evolution.util.RelatorioFactory;
 import br.com.si5.evolutionmedic.ejb.AvaliacaoEJB;
 import br.com.si5.evolutionmedic.ejb.FraseEJB;
 import br.com.si5.evolutionmedic.ejb.LeitoEJB;
@@ -174,5 +175,10 @@ public class AvaliacaoMB implements Serializable{
     public void setSessionParamIdAvaliacao(Integer id) {
 
         SessionUtil.setParam("idAvaliacao", id);
+    }
+    
+    public void imprimeAvaliacao(Integer id) {
+        RelatorioFactory.RelatorioAvaliacao(
+                "/WEB-INF/relatorios/reportAvaliacao.jasper", id);
     }
 }
